@@ -1,15 +1,18 @@
 body {
     background-color: rgb(253, 237, 218);
-    padding: 50px 50px 50px 50px;
+    padding: 5% 25% 5% 25%;
+    width: 1000px;
     display: flex;
 }
 
 .sidebar {
-    width: 200px;
+    width: 225px;
+    padding: 10px;
     background-color:rgb(228, 252, 255);
 }
 
 .content {
     flex: 1;
+    padding: 20px;
     background-color: rgb(255, 255, 226);
 }
