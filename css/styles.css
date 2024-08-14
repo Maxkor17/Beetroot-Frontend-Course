@@ -10,6 +10,13 @@ body {
 .container {
     text-align: center;
 }
+img {
+    width: auto;
+    height: 33vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 ul {
     list-style-type: none;
     padding: 0;
