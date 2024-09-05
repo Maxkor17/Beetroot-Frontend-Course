@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(253, 237, 218);
+    background-color: rgb(250, 241, 231);
     padding: 5% 25% 5% 25%;
     width: 1000px;
     display: flex;
@@ -8,11 +8,11 @@ body {
 .sidebar {
     width: 225px;
     padding: 10px;
-    background-color:rgb(228, 252, 255);
+    background-color:rgb(245, 254, 255);
 }
 
 .content {
     flex: 1;
     padding: 20px;
-    background-color: rgb(255, 255, 226);
+    background-color: rgb(255, 255, 237);
 }
