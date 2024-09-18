@@ -1,0 +1,92 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  gap: 198px;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: #2F281E;
+}
+
+header a:hover {
+  color: #FF9900;
+}
+
+.logo {
+  width: 150px;
+  margin-left: 120px;
+}
+
+.buttons {
+  display: flex;
+  gap: 32px;
+  margin-right: 120px;
+}
+
+.in, .up, .get {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid #BCD0E5;
+  border-radius: 4px;
+}
+
+.in {
+  background-color: #fff;
+}
+
+.up, .get {
+  background-color: #FF9900;
+  color: #fff;
+}
+
+.hero {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+  text-align: left;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-main {
+  max-width: 50%;
+}
+
+h2 {
+  font-size: 2.75rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  margin-bottom: 40px;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
