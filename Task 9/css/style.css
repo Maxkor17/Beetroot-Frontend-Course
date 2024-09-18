@@ -1,0 +1,36 @@
+h2 {
+    font-family: "Francois One", serif;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+div>span {
+    font-family: "Farro", serif;
+    margin-left: 10px;
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+p {
+    font-family: "PT Sans", serif;
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 48px;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bg {
+    background-color: lightgray;
+}
