@@ -116,7 +116,7 @@ footer ul :first-of-type {
   margin-right: 30px;
 }
 
-footer ul :hover {
+footer ul li:hover {
   opacity: 0.5;
 }
 
