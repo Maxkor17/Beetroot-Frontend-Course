@@ -1,10 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: rgba(255, 255, 255, 1);
     background-image: url('../img/bg-picture.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: auto 100%;
     background-position: top 150px left 812px;
+    
 }
 
 main {
@@ -15,6 +19,7 @@ main {
     gap: 30px;
     margin-left: 120px;
     margin-right: 120px;
+
 }
 
 main .content {
@@ -75,7 +80,8 @@ aside a {
 }
 
 #introduction, #core-components, #react-fundamentals, #handling-text-input {
-    margin-top: 70px;
+    padding-top: 70px;
+    margin-bottom: -35px;
 }
 
 h2 {
