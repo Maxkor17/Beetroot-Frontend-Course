@@ -1,7 +1,44 @@
+body {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+main {
+    width: 1200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.eng {
+    font-family: 'Tourney';
+    font-size: 22px;
+}
+
+.doc {
+    font-family: 'Staatliches';
+    line-height: 27.5px;
+    font-size: 22px;
+    margin-left: 50px;
+}
+
+.introduction, .core-components, .react-fundamentals, .handling-text-input {
+    margin-top: 70px;
+}
+
 h2 {
     font-family: "Francois One", serif;
     font-size: 36px;
     text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.chap {
+    font-family: 'Farro';
+    vertical-align: top;
 }
 
 div>span {
