@@ -1,19 +1,40 @@
 body {
+    background: rgba(255, 255, 255, 1);
+    background-image: url('../img/bg-picture.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: top 150px left 812px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: self-start;
+    gap: 30px;
     margin-left: 120px;
     margin-right: 120px;
 }
 
-main {
-    width: 1200px;
+main .content {
+    padding-top: 80px;
+    width: 785px;
+
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 15px;
+    left: 120px;
+    right: 120px;
 }
 .eng {
     font-family: 'Tourney';
     font-size: 22px;
+    margin: 0px;
 }
 
 .doc {
@@ -23,7 +44,37 @@ header {
     margin-left: 50px;
 }
 
-.introduction, .core-components, .react-fundamentals, .handling-text-input {
+aside {
+    position: sticky;
+    top: 80px;
+    left: 120px;
+    width: 385px;
+}
+
+aside ul {
+    padding: 0px;
+}
+
+aside li {
+    margin-top: 80px;
+    border-bottom: 1px solid rgba(189, 189, 189, 1);
+    list-style: none;
+}
+
+aside a {
+    color: inherit;
+    text-transform: uppercase;
+    font-family: Francois One;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#introduction, #core-components, #react-fundamentals, #handling-text-input {
     margin-top: 70px;
 }
 
