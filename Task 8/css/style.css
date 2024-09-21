@@ -56,6 +56,21 @@ img {
         grid-column: span 1;
         grid-row: span 1
     }
+
+    .grid-archi .archi-1, .grid-life .life-2, .grid-life .life-5, .grid-fashion .fashion-5 {
+        grid-row: 2;
+    }
+
+    .grid-fashion .fashion-3 {
+        grid-row: 1;
+    }
+
+    .grid-fashion .fashion-7 {
+        grid-row: 3;
+    }
+    .grid-fashion .fashion-10 {
+        grid-row: 4;
+    }
 }
 
 @media (max-width: 480px) {
