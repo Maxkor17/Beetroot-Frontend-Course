@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    height: 100vh;
+    height: 100%;
     display: flex;
 }
 
@@ -27,7 +27,6 @@ body {
 
 img {
     max-width: 100%;
-    height: auto;
     border-radius: 50%;
 }
 
