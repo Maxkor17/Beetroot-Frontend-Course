@@ -1,0 +1,183 @@
+$main-color: #FFCC00;
+$font-family-raleway: 'Raleway', sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
+$font-family-open-sans: 'Open Sans', sans-serif;
+
+html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 80vw;
+    height: 80vh;
+
+    h1, h2, h3, h4 {
+        margin: 0;
+    }
+}
+
+// Head Container
+.head {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    h3 {
+        @include heading-style(18px, 500, #898F8F);
+    }
+
+    h1 {
+        @include heading-style(60px, 900, $main-color);
+    }
+
+    .head-line-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        .head-line {
+            width: 210px;
+            height: 1px;
+            background-color: $main-color;
+        }
+    }
+}
+
+// Content Container
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    .dividing-line {
+        height: 560px;
+        width: 1px;
+        background-color: $main-color;
+    }
+    
+    .photo-container {
+        border: 1px solid $main-color;
+        position: relative;
+        overflow: visible;
+
+        img {
+            padding: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .visual-transform {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transform: rotate(45deg);
+            background-color: white;
+            z-index: 0;
+        }
+    }
+}
+
+
+
+.key-info-container {
+    margin-bottom: 30px;
+
+    h2 {
+        @include heading-style(36px, 900, #666666);
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 1px;
+            background-color: $main-color;
+            margin: 30px auto;
+        }
+    }
+
+    h3 {
+        @include heading-style(24px, 400, #666666);
+    }
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 49px;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #CCCCCC;
+        border-radius: 50%;
+    }
+}
+
+.info-container {
+    width: 430px;
+    text-align: center;
+
+    p {
+        @include text-style(14px, 500, #333333);
+        margin-bottom: 20px;
+    }
+
+    .lines-container {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 25px;
+
+        .small-line {
+            width: 10px;
+            height: 4px;
+            background: $main-color;
+        }
+
+        .main-line {
+            width: 20px;
+            height: 4px;
+            background: $main-color;
+        }
+    }
+
+    button {
+        text-transform: uppercase;
+        padding: 5px 10px;
+        border: 1px solid $main-color;
+        font-family: $font-family-open-sans;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 14px;
+        text-align: center;
+        background-color: white;
+        color: #666666;
+    }
+}
+
+@mixin heading-style($size, $weight, $color) {
+    font-family: $font-family-roboto;
+    font-size: $size;
+    font-weight: $weight;
+    text-align: center;
+    color: $color;
+    margin-bottom: 40px;
+}
+
+@mixin text-style($size, $weight, $color) {
+    font-family: $font-family-raleway;
+    font-size: $size;
+    font-weight: $weight;
+    text-align: center;
+}
