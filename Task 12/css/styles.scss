@@ -1,0 +1,156 @@
+$text-color: #000000;
+$header-height: 10vh;
+
+// Mixins
+
+// <h1>
+@mixin h1-styles {
+    font-family: "Red Hat Display";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+// <h5>
+@mixin h5-styles {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.56px;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+// <h6>
+@mixin h6-styles {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.56px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+// Reset
+body {
+    margin: 0px;
+}
+
+// Header
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: $header-height;
+
+    &>nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        &>a {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $text-color;
+            font-family: "Lato";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            letter-spacing: 0.3em;
+            text-align: center;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 80%;
+                height: 2px;
+                background-color: $text-color;
+                position: absolute;
+                bottom: -3px;
+                left: 50%;
+                transform: translateX(-50%) scaleX(0);
+                transition: transform 0.3s ease;
+            }
+
+            &:hover::after {
+                transform: translateX(-50%) scaleX(1);
+            }
+        }
+
+        &>a:last-of-type {
+            margin-left: 2rem;
+
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    &>img {
+        height: 12px;
+    }
+}
+
+// Main
+
+main {
+
+    // Hero Section
+    .hero {
+        height: calc(100vh - $header-height);
+        background-image: url(../images/first-screen.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &>h1 {
+            @include h1-styles();
+            position: absolute;
+            top: 25%;
+            left: 10%;
+        }
+    }
+
+    // Blog Section
+    .blog {
+        width: 70%;
+        margin: auto;
+
+        &>h1 {
+            @include h1-styles();
+        }
+
+        &>.blog-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            &>.blog-item-content {
+
+                &>h6 {
+                    @include h6-styles;
+                    margin: 0;
+                }
+
+                &>p {
+                    font-family: Red Hat Display;
+                    font-size: 23px;
+                    font-weight: 500;
+                    line-height: 38.18px;
+                    letter-spacing: 0.1em;
+                    text-align: left;
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
+                }
+
+                &>h5 {
+                    @include h5-styles;
+                }
+            }
+        }
+    }
+}
