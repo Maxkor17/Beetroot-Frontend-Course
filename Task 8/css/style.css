@@ -1,84 +1,130 @@
-h1 {
-    font-family: 'Delius Unicase';
-    text-align: center;
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: rgba(255, 255, 255, 1);
+    background-image: url('../img/bg-picture.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto 100%;
+    background-position: top 150px left 812px;
+    
 }
 
-.archi, .life, .fashion {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 5rem;
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: self-start;
+    gap: 30px;
+    margin-left: 120px;
+    margin-right: 120px;
+
 }
 
-.grid-archi, .grid-life, .grid-fashion {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2vw;
+main .content {
+    padding-top: 80px;
+    width: 785px;
+
 }
 
-img {
-    width: 100%;
-    height: auto;
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 15px;
+    left: 120px;
+    right: 120px;
+}
+.eng {
+    font-family: 'Tourney';
+    font-size: 22px;
+    margin: 0px;
 }
 
-.grid-archi .archi-2, .archi-3, .archi-6 {
-    grid-column: span 2;
+.doc {
+    font-family: 'Staatliches';
+    line-height: 27.5px;
+    font-size: 22px;
+    margin-left: 50px;
 }
 
-.grid-life .life-2, .life-3, .life-5 {
-    grid-column: span 2;
+aside {
+    position: sticky;
+    top: 80px;
+    left: 120px;
+    width: 385px;
 }
 
-.grid-life .life-3, .life-4 {
-    grid-row: span 2;
+aside ul {
+    padding: 0px;
 }
 
-.grid-fashion .fashion-2, .fashion-5, .fashion-6 {
-    grid-row: span 2;
+aside li {
+    margin-top: 80px;
+    border-bottom: 1px solid rgba(189, 189, 189, 1);
+    list-style: none;
 }
 
-.grid-fashion .fashion-8, .fashion-9 {
-    grid-column: span 2;
+aside a {
+    color: inherit;
+    text-transform: uppercase;
+    font-family: Francois One;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1rem;
-    }
-
-    .grid-archi, .grid-life, .grid-fashion {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .grid-archi .archi-2, .grid-archi .archi-3, .grid-archi .archi-6,
-    .grid-life .life-2, .grid-life .life-3, .grid-life .life-5,
-    .grid-fashion .fashion-2, .grid-fashion .fashion-5, .grid-fashion .fashion-6,
-    .grid-fashion .fashion-8, .grid-fashion .fashion-9 {
-        grid-column: span 1;
-        grid-row: span 1
-    }
-
-    .grid-archi .archi-1, .grid-life .life-2, .grid-life .life-5, .grid-fashion .fashion-5 {
-        grid-row: 2;
-    }
-
-    .grid-fashion .fashion-3 {
-        grid-row: 1;
-    }
-
-    .grid-fashion .fashion-7 {
-        grid-row: 3;
-    }
-    .grid-fashion .fashion-10 {
-        grid-row: 4;
-    }
+#introduction, #core-components, #react-fundamentals, #handling-text-input {
+    padding-top: 70px;
+    margin-bottom: -35px;
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 0.75rem;
-    }
+h2 {
+    font-family: "Francois One", serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
 
-    .grid-archi, .grid-life, .grid-fashion {
-        grid-template-columns: 1fr;
-    }
+.chap {
+    font-family: 'Farro';
+    vertical-align: top;
+}
+
+div>span {
+    font-family: "Farro", serif;
+    margin-left: 10px;
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+p {
+    font-family: "PT Sans", serif;
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 48px;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bg {
+    background-color: lightgray;
 }
