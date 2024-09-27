@@ -23,6 +23,15 @@ $header-height: 10vh;
     text-align: left;
 }
 
+@mixin h5-styles {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.56px;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
 // <h6>
 @mixin h6-styles {
     font-family: Lato;
@@ -33,9 +42,41 @@ $header-height: 10vh;
     text-align: left;
 }
 
+// <h7>
+@mixin h7-styles {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26.56px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+// <h9>
+@mixin h9-styles {
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19.92px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
 // Reset
 body {
     margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8,
+h9 {
+    margin: 0;
 }
 
 // Header
@@ -151,6 +192,169 @@ main {
                     @include h5-styles;
                 }
             }
+        }
+    }
+
+    .latest-posts {
+        width: 70%;
+        margin: auto;
+
+        >p {
+            font-family: "Red Hat Display";
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 46.48px;
+            letter-spacing: 0.1em;
+            text-align: left;
+        }
+
+        >.latest-posts-all-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+            >.latest-posts-item {
+                display: flex;
+                flex-direction: column;
+
+                >.latest-posts-item-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include h9-styles();
+                    margin-top: 1.5rem;
+                }
+
+                >p {
+                    font-family: "Red Hat Display";
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 36.52px;
+                    letter-spacing: 0.1em;
+                    text-align: left;
+                    margin: 1.5rem 0;
+                }
+
+                >h5 {
+                    @include h5-styles();
+                }
+            }
+        }
+    }
+
+    .most-popular {
+        width: 70%;
+        margin: auto;
+
+        >p {
+            font-family: "Red Hat Display";
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 46.48px;
+            letter-spacing: 0.1em;
+            text-align: left;
+        }
+
+        >.most-popular-all-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+            >.most-popular-item {
+                >.most-popular-item-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include h9-styles();
+                    margin-top: 1.5rem;
+                }
+    
+                >p {
+                    font-family: "Red Hat Display";
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 36.52px;
+                    letter-spacing: 0.1em;
+                    text-align: left;
+                    margin: 1.5rem 0;
+                }
+    
+                >h5 {
+                    @include h5-styles();
+                }
+            }
+        }
+        
+        >button {
+            width: 11.25rem;
+            height: 3rem;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+            background: #565656;
+            @include h7-styles();
+            color: #ffffff;
+
+            &:hover {
+                background: #323232;
+            }
+        }
+    }
+}
+
+footer {
+    background: #F4F4F4;
+    height: $header-height * 3;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+
+        .short-info {
+            margin-top: 2rem;
+            >h1 {
+                @include h1-styles();
+            }
+    
+            >h6 {
+                @include h6-styles();
+            }
+        }
+    
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+    
+            >a {
+                width: 3rem;
+                height: 3rem;
+                border: 1px solid #565656;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background: #565656;
+
+                    >svg path {
+                        fill: white;
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+
+        >h9 {
+            @include h9-styles();
         }
     }
 }
