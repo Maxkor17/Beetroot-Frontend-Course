@@ -1,0 +1,188 @@
+@mixin text-styles($font-family, $font-size, $font-weight, $line-height, $letter-spacing, $text-align: left, $text-transform: none) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    text-align: $text-align;
+    text-transform: $text-transform;
+}
+
+@mixin adaptive-bg($image, $padding-top) {
+    width: 100%;
+    padding-top: $padding-top;
+    background-image: url($image);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    width: 70vw;
+    margin: 0 auto;
+
+    > p {
+        @include text-styles("Lato", 16px, 400, 24px, 0.5em, left, uppercase);
+    }
+}
+
+main {
+    width: 70vw;
+    margin: 0 auto;
+
+    > section {
+        margin-bottom: 5.625rem;
+    }
+
+    .ai-fashion-platform {
+        > h1 {
+            @include text-styles("Red Hat Display", 48px, 400, 64px, 0.05em);
+        }
+
+        .bg-adaptive-1 {
+            @include adaptive-bg("../images/1-1.png", 42.74%);
+        }
+    }
+
+    // Common styles for sections
+    .project-overview,
+    .user-research,
+    .initial-sketches,
+    .final-design {
+        > h2 {
+            @include text-styles("Red Hat Display", 28px, 600, 46.48px, 0.1em);
+        }
+
+        > p {
+            @include text-styles("Lato", 19px, 400, 32px, 0.05em);
+        }
+    }
+
+    // Specific backgrounds for sections
+    .user-research .bg-adaptive-2,
+    .initial-sketches .bg-adaptive-3,
+    .final-design .bg-adaptive-4 {
+        @include adaptive-bg("../images/2-1.png", 42.74%);
+    }
+
+    .initial-sketches .bg-adaptive-3 {
+        @include adaptive-bg("../images/3-1.png", 42.74%);
+    }
+
+    .final-design .bg-adaptive-4 {
+        @include adaptive-bg("../images/4-1.png", 42.74%);
+    }
+}
+
+footer {
+    background: #F4F4F4;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .short-info {
+            margin-top: 2rem;
+
+            > h1 {
+                @include text-styles("Red Hat Display", 48px, 400, 64px, 0.05em);
+            }
+
+            > h6 {
+                @include text-styles("Lato", 16px, 400, 26.56px, 0.1em);
+            }
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+
+            > a {
+                width: 3rem;
+                height: 3rem;
+                border: 1px solid #565656;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background: #565656;
+
+                    > svg path {
+                        fill: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+
+        > h9 {
+            @include text-styles("Lato", 12px, 400, 19.92px, 0.1em);
+        }
+    }
+}
+
+@media screen and (min-resolution: 2dppx) {
+    main {
+        .ai-fashion-platform .bg-adaptive-1 {
+            @include adaptive-bg("../images/1-2.png", 54.28%);
+        }
+
+        .user-research .bg-adaptive-2 {
+            @include adaptive-bg("../images/2-2.png", 54.28%);
+        }
+
+        .initial-sketches .bg-adaptive-3 {
+            @include adaptive-bg("../images/3-2.png", 54.28%);
+        }
+
+        .final-design .bg-adaptive-4 {
+            @include adaptive-bg("../images/4-2.png", 54.28%);
+        }
+    }
+}
+
+@media screen and (min-resolution: 3dppx) {
+    main {
+        .ai-fashion-platform .bg-adaptive-1 {
+            @include adaptive-bg("../images/1-3.png", 100%);
+        }
+
+        .user-research .bg-adaptive-2 {
+            @include adaptive-bg("../images/2-3.png", 100%);
+        }
+
+        .initial-sketches .bg-adaptive-3 {
+            @include adaptive-bg("../images/3-3.png", 100%);
+        }
+
+        .final-design .bg-adaptive-4 {
+            @include adaptive-bg("../images/4-3.png", 100%);
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    footer {
+        .footer-content {
+            flex-direction: column;
+        }
+    }
+
+    main .project-overview {
+        > p {
+            width: 100%;
+        }
+    }
+}
