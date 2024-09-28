@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Cards</title>
+</head>
+
+<body>
+    <div class="deck">
+        <script>
+            let html = ""
+            for (const num of ["six", "seven", "eight", "nine", "ten"]) {
+                for (const suit of ["heart", "spade", "diamond", "club"]) {
+                    html += `
+                        <div class="card ${num} ${suit}">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <div class="card-back"></div>
+                            </div>
+                        </div>
+                    `
+                }
+            }
+            document.write(html)
+            document.currentScript.remove()
+        </script>
+    </div>
+</body>
+
+</html>
