@@ -1,8 +1,32 @@
 $base-card-width: 234px;
 $base-card-height: 332px;
+$bg-color: rgb(71, 83, 71);
+$card-border: 1px solid #121111;
+$card-radius: 10px;
+$card-transform-time: 0.6s;
+$suits: (
+    heart,
+    club,
+    diamond,
+    spade
+);
 
 body {
-    background-color: rgb(71, 83, 71);
+    background-color: $bg-color;
+}
+
+.deck {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+@keyframes changeBackground {
+    to {
+        transform: rotateY(180deg);
+        background-image: url(../images/card-shirt.png);
+        background-size: cover;
+    }
 }
 
 .card {
@@ -10,79 +34,89 @@ body {
     height: $base-card-height;
     background-color: white;
     position: relative;
+    border-radius: $card-radius;
+    border: $card-border;
+    transform: rotateY(0deg);
+    transition: transform $card-transform-time, background-color $card-transform-time;
+    transform-style: preserve-3d;
 
-    &.heart .card-front {
-        &::before, &::after, li {
-            background-image: url(../images/heart.svg);
+    &:hover {
+        animation: changeBackground $card-transform-time forwards;
+
+        .card-inner {
+            display: none;
         }
     }
 
-    &.club .card-front {
-        &::before, &::after, li {
-            background-image: url(../images/club.svg);
+    @each $suit in $suits {
+        &.#{$suit} .card-front {
+
+            &::before,
+            &::after,
+            li {
+                background-image: url(../images/#{$suit}.svg);
+            }
         }
     }
 
-    &.diamond .card-front {
-        &::before, &::after, li {
-            background-image: url(../images/diamond.svg);
-        }
-    }
-
-    &.spade .card-front {
-        &::before, &::after, li {
-            background-image: url(../images/spade.svg);
-        }
-    }
-
-    .card-inner {
+    .card-inner,
+    .card-front {
         height: 100%;
         width: 100%;
     }
 
     .card-front {
-        height: 100%;
-        width: 100%;
 
-        &::before, &::after {
+        &::before,
+        &::after {
             display: block;
             position: absolute;
             background-repeat: no-repeat;
             background-position: center;
             text-align: center;
             width: 12%;
-            height: 20%;
-            line-height: 2;
+            height: 28%;
+            background-size: 80%;
+            font-size: 32px;
         }
-
+        
         &::after {
             bottom: 0;
             right: 0;
             rotate: 180deg;
         }
-    }
 
-    .card-front ul {
-        list-style: none;
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: repeat(4, 1fr);
-        padding: 0;
-        place-items: center;
-        height: 100%;
-        width: 100%;
-        margin: 0;
-    }
+        ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: repeat(4, 1fr);
+            padding: 0;
+            place-items: center;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
 
-    li {
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-        display: block;
+        li {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 30%;
+            width: 100%;
+            height: 100%;
+            display: block;
 
-        &:nth-child(n+5) {
-            rotate: 180deg;
+            &:nth-child(n+5) {
+                rotate: 180deg;
+            }
+
+            &:nth-child(9) {
+                rotate: 0deg;
+            }
+
+            &:nth-child(n+9) {
+                background-size: 17.5%;
+            }
         }
     }
 
@@ -131,7 +165,9 @@ body {
     }
 
     &.six {
-        .card-front::before, .card-front::after {
+
+        .card-front::before,
+        .card-front::after {
             content: "6";
         }
 
@@ -141,10 +177,12 @@ body {
     }
 
     &.seven {
-        .card-front::before, .card-front::after {
+
+        .card-front::before,
+        .card-front::after {
             content: "7";
         }
-        
+
         li:nth-child(7) {
             grid-row: 1 / span 2;
             grid-column: 1 / span 2;
@@ -157,10 +195,12 @@ body {
     }
 
     &.eight {
-        .card-front::before, .card-front::after {
+
+        .card-front::before,
+        .card-front::after {
             content: "8";
         }
-        
+
         li:nth-child(7) {
             grid-row: 1 / span 2;
             grid-column: 1 / span 2;
@@ -178,10 +218,12 @@ body {
     }
 
     &.nine {
-        .card-front::before, .card-front::after {
+
+        .card-front::before,
+        .card-front::after {
             content: "9";
         }
-        
+
         li:nth-child(3) {
             grid-row: 2;
             grid-column: 1;
@@ -213,10 +255,12 @@ body {
     }
 
     &.ten {
-        .card-front::before, .card-front::after {
+
+        .card-front::before,
+        .card-front::after {
             content: "10";
         }
-        
+
         li:nth-child(3) {
             grid-row: 2;
             grid-column: 1;
@@ -247,4 +291,61 @@ body {
             grid-column: 1 / span 2;
         }
     }
+
+    &.jack {
+        .card-front::before,
+        .card-front::after {
+            content: "J";
+        }
+
+        .card-front > ul {
+            background-image: url(../images/jack.jpg);
+        }
+    }
+
+    &.queen {
+        .card-front::before,
+        .card-front::after {
+            content: "Q";
+        }
+
+        .card-front > ul {
+            background-image: url(../images/queen.jpg);
+        }
+    }
+
+    &.king {
+        .card-front::before,
+        .card-front::after {
+            content: "K";
+        }
+
+        .card-front > ul {
+            background-image: url(../images/king.jpg);
+        }
+    }
+
+    &.ace {
+        .card-front::before,
+        .card-front::after {
+            content: "A";
+        }
+
+        .card-front > ul {
+            background-image: url(../images/ace.jpg);
+        }
+    }
+
+    &.jack, &.queen, &.king, &.ace {
+        .card-front > ul {
+            background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: center;
+
+            & > li {
+                display: none;
+            }
+        }
+    }
+
 }

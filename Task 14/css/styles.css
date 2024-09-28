@@ -2,28 +2,53 @@ body {
   background-color: rgb(71, 83, 71);
 }
 
+.deck {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+@keyframes changeBackground {
+  to {
+    transform: rotateY(180deg);
+    background-image: url(../images/card-shirt.png);
+    background-size: cover;
+  }
+}
 .card {
   width: 234px;
   height: 332px;
   background-color: white;
   position: relative;
+  border-radius: 10px;
+  border: 1px solid #121111;
+  transform: rotateY(0deg);
+  transition: transform 0.6s, background-color 0.6s;
+  transform-style: preserve-3d;
 }
-.card.heart .card-front::before, .card.heart .card-front::after, .card.heart .card-front li {
+.card:hover {
+  animation: changeBackground 0.6s forwards;
+}
+.card:hover .card-inner {
+  display: none;
+}
+.card.heart .card-front::before, .card.heart .card-front::after,
+.card.heart .card-front li {
   background-image: url(../images/heart.svg);
 }
-.card.club .card-front::before, .card.club .card-front::after, .card.club .card-front li {
+.card.club .card-front::before, .card.club .card-front::after,
+.card.club .card-front li {
   background-image: url(../images/club.svg);
 }
-.card.diamond .card-front::before, .card.diamond .card-front::after, .card.diamond .card-front li {
+.card.diamond .card-front::before, .card.diamond .card-front::after,
+.card.diamond .card-front li {
   background-image: url(../images/diamond.svg);
 }
-.card.spade .card-front::before, .card.spade .card-front::after, .card.spade .card-front li {
+.card.spade .card-front::before, .card.spade .card-front::after,
+.card.spade .card-front li {
   background-image: url(../images/spade.svg);
 }
-.card .card-inner {
-  height: 100%;
-  width: 100%;
-}
+.card .card-inner,
 .card .card-front {
   height: 100%;
   width: 100%;
@@ -35,8 +60,9 @@ body {
   background-position: center;
   text-align: center;
   width: 12%;
-  height: 20%;
-  line-height: 2;
+  height: 28%;
+  background-size: 80%;
+  font-size: 32px;
 }
 .card .card-front::after {
   bottom: 0;
@@ -54,15 +80,22 @@ body {
   width: 100%;
   margin: 0;
 }
-.card li {
+.card .card-front li {
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 30%;
   width: 100%;
   height: 100%;
   display: block;
 }
-.card li:nth-child(n+5) {
+.card .card-front li:nth-child(n+5) {
   rotate: 180deg;
+}
+.card .card-front li:nth-child(9) {
+  rotate: 0deg;
+}
+.card .card-front li:nth-child(n+9) {
+  background-size: 17.5%;
 }
 .card li:nth-child(1) {
   grid-row: 1;
@@ -99,13 +132,15 @@ body {
 .card li:nth-child(9) {
   rotate: unset;
 }
-.card.six .card-front::before, .card.six .card-front::after {
+.card.six .card-front::before,
+.card.six .card-front::after {
   content: "6";
 }
 .card.six li:nth-child(n+7) {
   display: none;
 }
-.card.seven .card-front::before, .card.seven .card-front::after {
+.card.seven .card-front::before,
+.card.seven .card-front::after {
   content: "7";
 }
 .card.seven li:nth-child(7) {
@@ -116,7 +151,8 @@ body {
 .card.seven li:nth-child(n+8) {
   display: none;
 }
-.card.eight .card-front::before, .card.eight .card-front::after {
+.card.eight .card-front::before,
+.card.eight .card-front::after {
   content: "8";
 }
 .card.eight li:nth-child(7) {
@@ -131,7 +167,8 @@ body {
 .card.eight li:nth-child(n+9) {
   display: none;
 }
-.card.nine .card-front::before, .card.nine .card-front::after {
+.card.nine .card-front::before,
+.card.nine .card-front::after {
   content: "9";
 }
 .card.nine li:nth-child(3) {
@@ -157,7 +194,8 @@ body {
 .card.nine li:nth-child(10) {
   display: none;
 }
-.card.ten .card-front::before, .card.ten .card-front::after {
+.card.ten .card-front::before,
+.card.ten .card-front::after {
   content: "10";
 }
 .card.ten li:nth-child(3) {
@@ -183,4 +221,40 @@ body {
 .card.ten li:nth-child(10) {
   grid-row: 3/span 2;
   grid-column: 1/span 2;
+}
+.card.jack .card-front::before,
+.card.jack .card-front::after {
+  content: "J";
+}
+.card.jack .card-front > ul {
+  background-image: url(../images/jack.jpg);
+}
+.card.queen .card-front::before,
+.card.queen .card-front::after {
+  content: "Q";
+}
+.card.queen .card-front > ul {
+  background-image: url(../images/queen.jpg);
+}
+.card.king .card-front::before,
+.card.king .card-front::after {
+  content: "K";
+}
+.card.king .card-front > ul {
+  background-image: url(../images/king.jpg);
+}
+.card.ace .card-front::before,
+.card.ace .card-front::after {
+  content: "A";
+}
+.card.ace .card-front > ul {
+  background-image: url(../images/ace.jpg);
+}
+.card.jack .card-front > ul, .card.queen .card-front > ul, .card.king .card-front > ul, .card.ace .card-front > ul {
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+}
+.card.jack .card-front > ul > li, .card.queen .card-front > ul > li, .card.king .card-front > ul > li, .card.ace .card-front > ul > li {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
