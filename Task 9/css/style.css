@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background: rgba(255, 255, 255, 1);
     background-image: url('../img/bg-picture.png');
@@ -26,27 +27,6 @@ main .content {
     padding-top: 80px;
     width: 785px;
 
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 15px;
-    left: 120px;
-    right: 120px;
-}
-.eng {
-    font-family: 'Tourney';
-    font-size: 22px;
-    margin: 0px;
-}
-
-.doc {
-    font-family: 'Staatliches';
-    line-height: 27.5px;
-    font-size: 22px;
-    margin-left: 50px;
 }
 
 aside {
@@ -91,6 +71,15 @@ h2 {
     display: inline-block;
     margin-bottom: 40px;
     margin-top: 0px;
+
+    &::before {
+        content: "";
+        width: 100px;
+        height: 8px;
+        background-color: black;
+        display: block;
+        margin-bottom: 20px;
+    }
 }
 
 .chap {
