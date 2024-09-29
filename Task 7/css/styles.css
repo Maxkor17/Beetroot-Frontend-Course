@@ -2,10 +2,16 @@ body {
     background-color: #2B81AC;
     margin: 0;
     font-family: "Lucida Sans Unicode";
-    padding: 1%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     main {
         background-color: #3399CC;
+        height: 70%;
+        width: 70%;
+        padding: 2% 0;
 
         section {
             width: 80%;
@@ -45,7 +51,7 @@ body {
                     font-size: 22px;
                     text-align: center;
                     color: white;
-                    line-height: 8rem;
+                    line-height: 6rem;
                     opacity: 0.6;
                     transition: opacity 0.75s;
                     position: relative;
@@ -112,7 +118,7 @@ body {
                     &::after {
                         content: "";
                         position: absolute;
-                        top: 55%;
+                        top: 45%;
                         left: 50%;
                         font-size: 22px;
                         background-repeat: no-repeat;
