@@ -1,0 +1,192 @@
+body {
+    background-color: #2B81AC;
+    margin: 0;
+    font-family: "Lucida Sans Unicode";
+    padding: 1%;
+
+    main {
+        background-color: #3399CC;
+
+        section {
+            width: 80%;
+            height: 80%;
+            margin: auto;
+            padding: 1%;
+
+            h1 {
+                font-size: 21px;
+                line-height: 34px;
+                color: #FFFFFF;
+                margin-top: 0;
+
+                &::after {
+                    content: "";
+                    background-image: url(../images/wi-day-haze.svg);
+                    display: inline-block;
+                    width: 35px;
+                    height: 34px;
+                    vertical-align: middle;
+                    background-size: contain;
+                    margin-left: 0.25rem;
+                }
+            }
+
+            ul {
+                list-style: none;
+                font-size: 0;
+                padding: 0;
+
+                li {
+                    display: inline-block;
+                    height: 8rem;
+                    width: 25%;
+                    box-sizing: border-box;
+                    border: 2px solid #FFFFFF;
+                    font-size: 22px;
+                    text-align: center;
+                    color: white;
+                    line-height: 8rem;
+                    opacity: 0.6;
+                    transition: opacity 0.75s;
+                    position: relative;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        top: 25%;
+                        left: 50%;
+                        transform: translateX(-115%);
+                        font-size: 22px;
+                    }
+
+                    &:nth-child(1)::before {
+                        content: "21°C";
+                    }
+
+
+                    &:nth-child(2)::before {
+                        content: "11°C";
+                    }
+
+                    &:nth-child(3)::before {
+                        content: "15°C";
+                    }
+
+                    &:nth-child(4)::before {
+                        content: "21°C";
+                    }
+
+
+                    &:nth-child(5)::before {
+                        content: "32°C";
+                    }
+
+
+                    &:nth-child(6)::before {
+                        content: "21°C";
+                    }
+
+                    &:nth-child(7)::before {
+                        content: "17°C";
+                    }
+
+                    &:nth-child(8)::before {
+                        content: "17°C";
+                    }
+
+                    &:nth-child(9)::before {
+                        content: "15°C";
+                    }
+
+                    &:nth-child(10)::before {
+                        content: "8°C";
+                    }
+
+                    &:nth-child(11)::before {
+                        content: "25°C";
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 55%;
+                        left: 50%;
+                        font-size: 22px;
+                        background-repeat: no-repeat;
+                        width: 47px;
+                        height: 61px;
+                        transform: translateX(15%);
+                    }
+
+                    &:nth-child(1)::after {
+                        background-image: url(../images/wi-day-sunny.svg);
+                    }
+
+
+                    &:nth-child(2)::after {
+                        background-image: url(../images/wi-day-rain.svg);
+                    }
+
+                    &:nth-child(3)::after {
+                        background-image: url(../images/wi-day-fog.svg);
+                    }
+
+                    &:nth-child(4)::after {
+                        background-image: url(../images/wi-day-cloudy-high.svg);
+                    }
+
+
+                    &:nth-child(5)::after {
+                        background-image: url(../images/wi-day-snow.svg);
+                    }
+
+
+                    &:nth-child(6)::after {
+                        background-image: url(../images/wi-day-sprinkle.svg);
+                    }
+
+                    &:nth-child(7)::after {
+                        background-image: url(../images/wi-day-windy.svg);
+                    }
+
+                    &:nth-child(8)::after {
+                        background-image: url(../images/wi-day-showers.svg);
+                    }
+
+                    &:nth-child(9)::after {
+                        background-image: url(../images/wi-day-thunderstorm.svg);
+                    }
+
+                    &:nth-child(10)::after {
+                        background-image: url(../images/wi-day-sunny-overcast.svg);
+                    }
+
+                    &:nth-child(11)::after {
+                        background-image: url(../images/wi-day-cloudy-windy.svg);
+                    }
+
+                }
+
+                li:nth-child(1),
+                li:nth-child(9) {
+                    width: 50%;
+                }
+
+                li:nth-child(11) {
+                    width: 100%;
+                }
+            }
+
+            h3 {
+                font-size: 16px;
+                line-height: 18.75px;
+                color: #FFFFFF;
+                margin-top: 2rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

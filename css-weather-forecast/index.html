@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>CSS Weather Forecast</h1>
+            <ul>
+                <li>Lisbon</li>
+                <li>Paris</li>
+                <li>Belgrade</li>
+                <li>Venice</li>
+                <li>Tel-Alive</li>
+                <li>Cair</li>
+                <li>New-York</li>
+                <li>New-Delphi</li>
+                <li>San-Francisco</li>
+                <li>Tokyo</li>
+                <li>Sydney</li>
+            </ul>
+            <h3>Have a nice day and don't forget umbrella if you are in New Delhi now!</h3>
+        </section>
+    </main>
+
+    <script>
+        // Array of colors (using hex codes)
+        const colors = ['#3399CC', '#33CCCC', '#996699', '#C24747', '#E2674A', '#FFCC66', '#99CC99', '#669999', '#CC6699', '#339966', '#666699']; // red, #3399CC (blue), green
+
+        // Get all li elements
+        const listItems = document.querySelectorAll('li');
+
+        // Apply background color to each li element
+        listItems.forEach((li, index) => {
+            li.style.backgroundColor = colors[index % colors.length]; // Cycle through colors
+        });
+    </script>
+</body>
+
+</html>
