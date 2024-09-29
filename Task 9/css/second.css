@@ -24,7 +24,6 @@ main {
 
     section {
         padding: 20px 0px;
-        gap: 30px;
         border-width: 1px 0px;
         border-style: solid;
         border-color: #BFBFBF;
@@ -33,7 +32,7 @@ main {
             list-style-type: none;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            column-gap: 30px;
             padding: 0;
 
             >li {
