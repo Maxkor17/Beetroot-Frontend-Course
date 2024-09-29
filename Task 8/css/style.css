@@ -199,4 +199,8 @@ img {
     .grid-fashion {
         grid-template-columns: 1fr;
     }
+
+    .grid-life .life-3, .grid-life .life-4, .grid-life .life-5 {
+        grid-row: span 1;
+    }
 }
