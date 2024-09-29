@@ -1,109 +1,372 @@
-@mixin text-styles($font-family, $font-size, $font-weight, $line-height, $letter-spacing, $text-align: left, $text-transform: none) {
-    font-family: $font-family;
-    font-size: $font-size;
-    font-weight: $font-weight;
-    line-height: $line-height;
-    letter-spacing: $letter-spacing;
-    text-align: $text-align;
-    text-transform: $text-transform;
+$text-color: #000000;
+$header-height: 10vh;
+
+// Mixins
+
+// <h1>
+@mixin h1-styles {
+    font-family: "Red Hat Display";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0.05em;
+    text-align: left;
 }
 
-@mixin adaptive-bg($image, $padding-top) {
-    width: 100%;
-    padding-top: $padding-top;
-    background-image: url($image);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+// <h3>
+@mixin h3-styles {
+    font-family: "Red Hat Display";
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 38.18px;
+    letter-spacing: 0.1em;
+    text-align: left;
 }
 
+// <h4>
+@mixin h4-styles {
+    font-family: Lato;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+// <h5>
+@mixin h5-styles {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.56px;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+// <h6>
+@mixin h6-styles {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.56px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+// <h7>
+@mixin h7-styles {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26.56px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+// <h9>
+@mixin h9-styles {
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19.92px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+// Reset
 body {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8,
+h9 {
     margin: 0;
 }
 
+// Header
 header {
-    width: 70vw;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: $header-height;
 
-    > p {
-        @include text-styles("Lato", 16px, 400, 24px, 0.5em, left, uppercase);
+    &>nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        &>a {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $text-color;
+            font-family: "Lato";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            letter-spacing: 0.3em;
+            text-align: center;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 80%;
+                height: 2px;
+                background-color: $text-color;
+                position: absolute;
+                bottom: -3px;
+                left: 50%;
+                transform: translateX(-50%) scaleX(0);
+                transition: transform 0.3s ease;
+            }
+
+            &:hover::after {
+                transform: translateX(-50%) scaleX(1);
+            }
+        }
+
+        &>a:last-of-type {
+            margin-left: 2rem;
+
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    &>img {
+        height: 12px;
     }
 }
 
+// Main
+
 main {
-    width: 70vw;
-    margin: 0 auto;
+    // Hero Section
+    .hero {
+        height: calc(100vh - $header-height);
+        background-image: url(../images/first-screen.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 5rem;
 
-    > section {
-        margin-bottom: 5.625rem;
-    }
-
-    .ai-fashion-platform {
-        > h1 {
-            @include text-styles("Red Hat Display", 48px, 400, 64px, 0.05em);
-        }
-
-        .bg-adaptive-1 {
-            @include adaptive-bg("../images/1-1.png", 42.74%);
-        }
-    }
-
-    // Common styles for sections
-    .project-overview,
-    .user-research,
-    .initial-sketches,
-    .final-design {
-        > h2 {
-            @include text-styles("Red Hat Display", 28px, 600, 46.48px, 0.1em);
-        }
-
-        > p {
-            @include text-styles("Lato", 19px, 400, 32px, 0.05em);
+        &>h1 {
+            @include h1-styles();
+            position: absolute;
+            top: 25%;
+            left: 10%;
         }
     }
 
-    // Specific backgrounds for sections
-    .user-research .bg-adaptive-2,
-    .initial-sketches .bg-adaptive-3,
-    .final-design .bg-adaptive-4 {
-        @include adaptive-bg("../images/2-1.png", 42.74%);
+    // Blog Section
+    .blog {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 5rem;
+
+        &>h1 {
+            @include h1-styles();
+            margin-bottom: 3rem;
+        }
+
+        &>.blog-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            &>.blog-item-content {
+
+                &>h6 {
+                    @include h6-styles;
+                    margin: 0;
+                }
+
+                &>p {
+                    font-family: Red Hat Display;
+                    font-size: 23px;
+                    font-weight: 500;
+                    line-height: 38.18px;
+                    letter-spacing: 0.1em;
+                    text-align: left;
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
+                }
+
+                &>h5 {
+                    @include h5-styles;
+                }
+            }
+        }
     }
 
-    .initial-sketches .bg-adaptive-3 {
-        @include adaptive-bg("../images/3-1.png", 42.74%);
+    .latest-posts {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 5rem;
+
+        >p {
+            font-family: "Red Hat Display";
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 46.48px;
+            letter-spacing: 0.1em;
+            text-align: left;
+        }
+
+        >.latest-posts-all-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+            >.latest-posts-item {
+                display: flex;
+                flex-direction: column;
+
+                >.latest-posts-item-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include h9-styles();
+                    margin-top: 1.5rem;
+                }
+
+                >p {
+                    font-family: "Red Hat Display";
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 36.52px;
+                    letter-spacing: 0.1em;
+                    text-align: left;
+                    margin: 1.5rem 0;
+                }
+
+                >h5 {
+                    @include h5-styles();
+                }
+            }
+        }
     }
 
-    .final-design .bg-adaptive-4 {
-        @include adaptive-bg("../images/4-1.png", 42.74%);
+    .most-popular {
+        width: 70%;
+        margin: auto;
+
+        >p {
+            font-family: "Red Hat Display";
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 46.48px;
+            letter-spacing: 0.1em;
+            text-align: left;
+        }
+
+        >.most-popular-all-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+            >.most-popular-item {
+                >.most-popular-item-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include h9-styles();
+                    margin-top: 1.5rem;
+                }
+    
+                >p {
+                    font-family: "Red Hat Display";
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 36.52px;
+                    letter-spacing: 0.1em;
+                    text-align: left;
+                    margin: 1.5rem 0;
+                }
+    
+                >h5 {
+                    @include h5-styles();
+                }
+
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+        
+        >button {
+            width: 11.25rem;
+            height: 3rem;
+            margin: 3rem auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+            background: #565656;
+            @include h7-styles();
+            color: #ffffff;
+            margin-bottom: 5rem;
+
+            &:hover {
+                background: #323232;
+            }
+        }
+
+    }
+
+    .info {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14rem;
+        margin-bottom: 5rem;
+
+        >div h3 {
+            @include h3-styles();
+        }
+        
+        >div h4 {
+            @include h4-styles();
+        }
     }
 }
 
 footer {
     background: #F4F4F4;
-
     .footer-content {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        
 
         .short-info {
             margin-top: 2rem;
-
-            > h1 {
-                @include text-styles("Red Hat Display", 48px, 400, 64px, 0.05em);
+            >h1 {
+                @include h1-styles();
             }
-
-            > h6 {
-                @include text-styles("Lato", 16px, 400, 26.56px, 0.1em);
+    
+            >h6 {
+                @include h6-styles();
             }
         }
-
+    
         .links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-
-            > a {
+    
+            >a {
                 width: 3rem;
                 height: 3rem;
                 border: 1px solid #565656;
@@ -114,75 +377,28 @@ footer {
                 &:hover {
                     background: #565656;
 
-                    > svg path {
+                    >svg path {
                         fill: white;
                     }
                 }
             }
         }
     }
-
     .copyright {
         display: flex;
         justify-content: center;
         margin-top: 1.5rem;
 
-        > h9 {
-            @include text-styles("Lato", 12px, 400, 19.92px, 0.1em);
+        >h9 {
+            @include h9-styles();
         }
     }
 }
 
-@media screen and (min-resolution: 2dppx) {
-    main {
-        .ai-fashion-platform .bg-adaptive-1 {
-            @include adaptive-bg("../images/1-2.png", 54.28%);
-        }
+@media screen and (max-width: 768px) {
 
-        .user-research .bg-adaptive-2 {
-            @include adaptive-bg("../images/2-2.png", 54.28%);
-        }
-
-        .initial-sketches .bg-adaptive-3 {
-            @include adaptive-bg("../images/3-2.png", 54.28%);
-        }
-
-        .final-design .bg-adaptive-4 {
-            @include adaptive-bg("../images/4-2.png", 54.28%);
-        }
-    }
 }
 
-@media screen and (min-resolution: 3dppx) {
-    main {
-        .ai-fashion-platform .bg-adaptive-1 {
-            @include adaptive-bg("../images/1-3.png", 100%);
-        }
+@media screen and (max-width: 320px) {
 
-        .user-research .bg-adaptive-2 {
-            @include adaptive-bg("../images/2-3.png", 100%);
-        }
-
-        .initial-sketches .bg-adaptive-3 {
-            @include adaptive-bg("../images/3-3.png", 100%);
-        }
-
-        .final-design .bg-adaptive-4 {
-            @include adaptive-bg("../images/4-3.png", 100%);
-        }
-    }
-}
-
-@media screen and (max-width: 840px) {
-    footer {
-        .footer-content {
-            flex-direction: column;
-        }
-    }
-
-    main .project-overview {
-        > p {
-            width: 100%;
-        }
-    }
 }

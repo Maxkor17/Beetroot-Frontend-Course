@@ -1,94 +1,278 @@
 body {
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8,
+h9 {
   margin: 0;
 }
 
 header {
-  width: 70vw;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
 }
-header > p {
-  font-family: "Lato";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.5em;
-  text-align: left;
+header > nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+header > nav > a {
   text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  letter-spacing: 0.3em;
+  text-align: center;
+  position: relative;
+}
+header > nav > a::after {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.3s ease;
+}
+header > nav > a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+header > nav > a:last-of-type {
+  margin-left: 2rem;
+}
+header > nav > a:last-of-type::after {
+  content: none;
+}
+header > img {
+  height: 12px;
 }
 
-main {
-  width: 70vw;
-  margin: 0 auto;
+main .hero {
+  height: 90vh;
+  background-image: url(../images/first-screen.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 5rem;
 }
-main > section {
-  margin-bottom: 5.625rem;
-}
-main .ai-fashion-platform > h1 {
+main .hero > h1 {
   font-family: "Red Hat Display";
   font-size: 48px;
   font-weight: 400;
   line-height: 64px;
   letter-spacing: 0.05em;
   text-align: left;
-  text-transform: none;
+  position: absolute;
+  top: 25%;
+  left: 10%;
 }
-main .ai-fashion-platform .bg-adaptive-1 {
-  width: 100%;
-  padding-top: 42.74%;
-  background-image: url("../images/1-1.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+main .blog {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 5rem;
 }
-main .project-overview > h2,
-main .user-research > h2,
-main .initial-sketches > h2,
-main .final-design > h2 {
+main .blog > h1 {
+  font-family: "Red Hat Display";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 64px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+main .blog > .blog-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+main .blog > .blog-item > .blog-item-content > h6 {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26.56px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin: 0;
+}
+main .blog > .blog-item > .blog-item-content > p {
+  font-family: Red Hat Display;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 38.18px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+main .blog > .blog-item > .blog-item-content > h5 {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26.56px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+main .latest-posts {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+main .latest-posts > p {
   font-family: "Red Hat Display";
   font-size: 28px;
   font-weight: 600;
   line-height: 46.48px;
   letter-spacing: 0.1em;
   text-align: left;
-  text-transform: none;
 }
-main .project-overview > p,
-main .user-research > p,
-main .initial-sketches > p,
-main .final-design > p {
-  font-family: "Lato";
+main .latest-posts > .latest-posts-all-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+main .latest-posts > .latest-posts-all-items > .latest-posts-item {
+  display: flex;
+  flex-direction: column;
+}
+main .latest-posts > .latest-posts-all-items > .latest-posts-item > .latest-posts-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.92px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+main .latest-posts > .latest-posts-all-items > .latest-posts-item > p {
+  font-family: "Red Hat Display";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 36.52px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin: 1.5rem 0;
+}
+main .latest-posts > .latest-posts-all-items > .latest-posts-item > h5 {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26.56px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+main .most-popular {
+  width: 70%;
+  margin: auto;
+}
+main .most-popular > p {
+  font-family: "Red Hat Display";
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 46.48px;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+main .most-popular > .most-popular-all-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+main .most-popular > .most-popular-all-items > .most-popular-item > .most-popular-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.92px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+main .most-popular > .most-popular-all-items > .most-popular-item > p {
+  font-family: "Red Hat Display";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 36.52px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin: 1.5rem 0;
+}
+main .most-popular > .most-popular-all-items > .most-popular-item > h5 {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26.56px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+main .most-popular > .most-popular-all-items > .most-popular-item > img {
+  width: 100%;
+}
+main .most-popular > button {
+  width: 11.25rem;
+  height: 3rem;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  background: #565656;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26.56px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 5rem;
+}
+main .most-popular > button:hover {
+  background: #323232;
+}
+main .info {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14rem;
+  margin-bottom: 5rem;
+}
+main .info > div h3 {
+  font-family: "Red Hat Display";
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 38.18px;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+main .info > div h4 {
+  font-family: Lato;
   font-size: 19px;
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0.05em;
   text-align: left;
-  text-transform: none;
-}
-main .user-research .bg-adaptive-2,
-main .initial-sketches .bg-adaptive-3,
-main .final-design .bg-adaptive-4 {
-  width: 100%;
-  padding-top: 42.74%;
-  background-image: url("../images/2-1.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-main .initial-sketches .bg-adaptive-3 {
-  width: 100%;
-  padding-top: 42.74%;
-  background-image: url("../images/3-1.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-main .final-design .bg-adaptive-4 {
-  width: 100%;
-  padding-top: 42.74%;
-  background-image: url("../images/4-1.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 footer {
@@ -109,16 +293,14 @@ footer .footer-content .short-info > h1 {
   line-height: 64px;
   letter-spacing: 0.05em;
   text-align: left;
-  text-transform: none;
 }
 footer .footer-content .short-info > h6 {
-  font-family: "Lato";
+  font-family: Lato;
   font-size: 16px;
   font-weight: 400;
   line-height: 26.56px;
   letter-spacing: 0.1em;
   text-align: left;
-  text-transform: none;
 }
 footer .footer-content .links {
   display: flex;
@@ -145,88 +327,10 @@ footer .copyright {
   margin-top: 1.5rem;
 }
 footer .copyright > h9 {
-  font-family: "Lato";
+  font-family: Lato;
   font-size: 12px;
   font-weight: 400;
   line-height: 19.92px;
   letter-spacing: 0.1em;
   text-align: left;
-  text-transform: none;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
-  main .ai-fashion-platform .bg-adaptive-1 {
-    width: 100%;
-    padding-top: 54.28%;
-    background-image: url("../images/1-2.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  main .user-research .bg-adaptive-2 {
-    width: 100%;
-    padding-top: 54.28%;
-    background-image: url("../images/2-2.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  main .initial-sketches .bg-adaptive-3 {
-    width: 100%;
-    padding-top: 54.28%;
-    background-image: url("../images/3-2.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  main .final-design .bg-adaptive-4 {
-    width: 100%;
-    padding-top: 54.28%;
-    background-image: url("../images/4-2.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx) {
-  main .ai-fashion-platform .bg-adaptive-1 {
-    width: 100%;
-    padding-top: 100%;
-    background-image: url("../images/1-3.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  main .user-research .bg-adaptive-2 {
-    width: 100%;
-    padding-top: 100%;
-    background-image: url("../images/2-3.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  main .initial-sketches .bg-adaptive-3 {
-    width: 100%;
-    padding-top: 100%;
-    background-image: url("../images/3-3.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  main .final-design .bg-adaptive-4 {
-    width: 100%;
-    padding-top: 100%;
-    background-image: url("../images/4-3.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-@media screen and (max-width: 840px) {
-  footer .footer-content {
-    flex-direction: column;
-  }
-  main .project-overview > p {
-    width: 100%;
-  }
 }/*# sourceMappingURL=styles.css.map */

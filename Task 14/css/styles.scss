@@ -1,351 +1,188 @@
-$base-card-width: 234px;
-$base-card-height: 332px;
-$bg-color: rgb(71, 83, 71);
-$card-border: 1px solid #121111;
-$card-radius: 10px;
-$card-transform-time: 0.6s;
-$suits: (
-    heart,
-    club,
-    diamond,
-    spade
-);
+@mixin text-styles($font-family, $font-size, $font-weight, $line-height, $letter-spacing, $text-align: left, $text-transform: none) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    text-align: $text-align;
+    text-transform: $text-transform;
+}
+
+@mixin adaptive-bg($image, $padding-top) {
+    width: 100%;
+    padding-top: $padding-top;
+    background-image: url($image);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 body {
-    background-color: $bg-color;
+    margin: 0;
 }
 
-.deck {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
-}
+header {
+    width: 70vw;
+    margin: 0 auto;
 
-@keyframes changeBackground {
-    to {
-        transform: rotateY(180deg);
-        background-image: url(../images/card-shirt.png);
-        background-size: cover;
+    > p {
+        @include text-styles("Lato", 16px, 400, 24px, 0.5em, left, uppercase);
     }
 }
 
-.card {
-    width: $base-card-width;
-    height: $base-card-height;
-    background-color: white;
-    position: relative;
-    border-radius: $card-radius;
-    border: $card-border;
-    transform: rotateY(0deg);
-    transition: transform $card-transform-time, background-color $card-transform-time;
-    transform-style: preserve-3d;
+main {
+    width: 70vw;
+    margin: 0 auto;
 
-    &:hover {
-        animation: changeBackground $card-transform-time forwards;
+    > section {
+        margin-bottom: 5.625rem;
+    }
 
-        .card-inner {
-            display: none;
+    .ai-fashion-platform {
+        > h1 {
+            @include text-styles("Red Hat Display", 48px, 400, 64px, 0.05em);
+        }
+
+        .bg-adaptive-1 {
+            @include adaptive-bg("../images/1-1.png", 42.74%);
         }
     }
 
-    @each $suit in $suits {
-        &.#{$suit} .card-front {
+    // Common styles for sections
+    .project-overview,
+    .user-research,
+    .initial-sketches,
+    .final-design {
+        > h2 {
+            @include text-styles("Red Hat Display", 28px, 600, 46.48px, 0.1em);
+        }
 
-            &::before,
-            &::after,
-            li {
-                background-image: url(../images/#{$suit}.svg);
+        > p {
+            @include text-styles("Lato", 19px, 400, 32px, 0.05em);
+        }
+    }
+
+    // Specific backgrounds for sections
+    .user-research .bg-adaptive-2,
+    .initial-sketches .bg-adaptive-3,
+    .final-design .bg-adaptive-4 {
+        @include adaptive-bg("../images/2-1.png", 42.74%);
+    }
+
+    .initial-sketches .bg-adaptive-3 {
+        @include adaptive-bg("../images/3-1.png", 42.74%);
+    }
+
+    .final-design .bg-adaptive-4 {
+        @include adaptive-bg("../images/4-1.png", 42.74%);
+    }
+}
+
+footer {
+    background: #F4F4F4;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .short-info {
+            margin-top: 2rem;
+
+            > h1 {
+                @include text-styles("Red Hat Display", 48px, 400, 64px, 0.05em);
+            }
+
+            > h6 {
+                @include text-styles("Lato", 16px, 400, 26.56px, 0.1em);
+            }
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+
+            > a {
+                width: 3rem;
+                height: 3rem;
+                border: 1px solid #565656;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background: #565656;
+
+                    > svg path {
+                        fill: white;
+                    }
+                }
             }
         }
     }
 
-    .card-inner,
-    .card-front {
-        height: 100%;
-        width: 100%;
+    .copyright {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+
+        > h9 {
+            @include text-styles("Lato", 12px, 400, 19.92px, 0.1em);
+        }
+    }
+}
+
+@media screen and (min-resolution: 2dppx) {
+    main {
+        .ai-fashion-platform .bg-adaptive-1 {
+            @include adaptive-bg("../images/1-2.png", 54.28%);
+        }
+
+        .user-research .bg-adaptive-2 {
+            @include adaptive-bg("../images/2-2.png", 54.28%);
+        }
+
+        .initial-sketches .bg-adaptive-3 {
+            @include adaptive-bg("../images/3-2.png", 54.28%);
+        }
+
+        .final-design .bg-adaptive-4 {
+            @include adaptive-bg("../images/4-2.png", 54.28%);
+        }
+    }
+}
+
+@media screen and (min-resolution: 3dppx) {
+    main {
+        .ai-fashion-platform .bg-adaptive-1 {
+            @include adaptive-bg("../images/1-3.png", 100%);
+        }
+
+        .user-research .bg-adaptive-2 {
+            @include adaptive-bg("../images/2-3.png", 100%);
+        }
+
+        .initial-sketches .bg-adaptive-3 {
+            @include adaptive-bg("../images/3-3.png", 100%);
+        }
+
+        .final-design .bg-adaptive-4 {
+            @include adaptive-bg("../images/4-3.png", 100%);
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    footer {
+        .footer-content {
+            flex-direction: column;
+        }
     }
 
-    .card-front {
-
-        &::before,
-        &::after {
-            display: block;
-            position: absolute;
-            background-repeat: no-repeat;
-            background-position: center;
-            text-align: center;
-            width: 12%;
-            height: 28%;
-            background-size: 80%;
-            font-size: 32px;
-        }
-        
-        &::after {
-            bottom: 0;
-            right: 0;
-            rotate: 180deg;
-        }
-
-        ul {
-            list-style: none;
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-template-rows: repeat(4, 1fr);
-            padding: 0;
-            place-items: center;
-            height: 100%;
+    main .project-overview {
+        > p {
             width: 100%;
-            margin: 0;
-        }
-
-        li {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 30%;
-            width: 100%;
-            height: 100%;
-            display: block;
-
-            &:nth-child(n+5) {
-                rotate: 180deg;
-            }
-
-            &:nth-child(9) {
-                rotate: 0deg;
-            }
-
-            &:nth-child(n+9) {
-                background-size: 17.5%;
-            }
         }
     }
-
-    li:nth-child(1) {
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    li:nth-child(2) {
-        grid-row: 1;
-        grid-column: 2;
-    }
-
-    li:nth-child(3) {
-        grid-row: 2 / span 2;
-        grid-column: 1;
-    }
-
-    li:nth-child(4) {
-        grid-row: 2 / span 2;
-        grid-column: 2;
-    }
-
-    li:nth-child(5) {
-        grid-row: 4;
-        grid-column: 1;
-    }
-
-    li:nth-child(6) {
-        grid-row: 4;
-        grid-column: 2;
-    }
-
-    li:nth-child(7) {
-        grid-row: 4;
-        grid-column: 1;
-    }
-
-    li:nth-child(8) {
-        grid-row: 4;
-        grid-column: 2;
-    }
-
-    li:nth-child(9) {
-        rotate: unset;
-    }
-
-    &.six {
-
-        .card-front::before,
-        .card-front::after {
-            content: "6";
-        }
-
-        li:nth-child(n+7) {
-            display: none;
-        }
-    }
-
-    &.seven {
-
-        .card-front::before,
-        .card-front::after {
-            content: "7";
-        }
-
-        li:nth-child(7) {
-            grid-row: 1 / span 2;
-            grid-column: 1 / span 2;
-            rotate: unset;
-        }
-
-        li:nth-child(n+8) {
-            display: none;
-        }
-    }
-
-    &.eight {
-
-        .card-front::before,
-        .card-front::after {
-            content: "8";
-        }
-
-        li:nth-child(7) {
-            grid-row: 1 / span 2;
-            grid-column: 1 / span 2;
-            rotate: unset;
-        }
-
-        li:nth-child(8) {
-            grid-row: 3 / span 2;
-            grid-column: 1 / span 2;
-        }
-
-        li:nth-child(n+9) {
-            display: none;
-        }
-    }
-
-    &.nine {
-
-        .card-front::before,
-        .card-front::after {
-            content: "9";
-        }
-
-        li:nth-child(3) {
-            grid-row: 2;
-            grid-column: 1;
-        }
-
-        li:nth-child(4) {
-            grid-row: 2;
-            grid-column: 2;
-        }
-
-        li:nth-child(5) {
-            grid-row: 3;
-            grid-column: 1;
-        }
-
-        li:nth-child(6) {
-            grid-row: 3;
-            grid-column: 2;
-        }
-
-        li:nth-child(9) {
-            grid-row: 2 / span 2;
-            grid-column: 1 / span 2;
-        }
-
-        li:nth-child(10) {
-            display: none;
-        }
-    }
-
-    &.ten {
-
-        .card-front::before,
-        .card-front::after {
-            content: "10";
-        }
-
-        li:nth-child(3) {
-            grid-row: 2;
-            grid-column: 1;
-        }
-
-        li:nth-child(4) {
-            grid-row: 2;
-            grid-column: 2;
-        }
-
-        li:nth-child(5) {
-            grid-row: 3;
-            grid-column: 1;
-        }
-
-        li:nth-child(6) {
-            grid-row: 3;
-            grid-column: 2;
-        }
-
-        li:nth-child(9) {
-            grid-row: 1 / span 2;
-            grid-column: 1 / span 2;
-        }
-
-        li:nth-child(10) {
-            grid-row: 3 / span 2;
-            grid-column: 1 / span 2;
-        }
-    }
-
-    &.jack {
-        .card-front::before,
-        .card-front::after {
-            content: "J";
-        }
-
-        .card-front > ul {
-            background-image: url(../images/jack.jpg);
-        }
-    }
-
-    &.queen {
-        .card-front::before,
-        .card-front::after {
-            content: "Q";
-        }
-
-        .card-front > ul {
-            background-image: url(../images/queen.jpg);
-        }
-    }
-
-    &.king {
-        .card-front::before,
-        .card-front::after {
-            content: "K";
-        }
-
-        .card-front > ul {
-            background-image: url(../images/king.jpg);
-        }
-    }
-
-    &.ace {
-        .card-front::before,
-        .card-front::after {
-            content: "A";
-        }
-
-        .card-front > ul {
-            background-image: url(../images/ace.jpg);
-        }
-    }
-
-    &.jack, &.queen, &.king, &.ace {
-        .card-front > ul {
-            background-repeat: no-repeat;
-            background-size: 70%;
-            background-position: center;
-
-            & > li {
-                display: none;
-            }
-        }
-    }
-
 }
