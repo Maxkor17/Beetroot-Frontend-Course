@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Cards</title>
+</head>
+
+<body>
+    <div class="deck">
+        <script>
+            const nums = ["six", "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace"];
+            const suits = ["heart", "spade", "diamond", "club"];
+            
+            let cards = [];
+        
+            for (const num of nums) {
+                for (const suit of suits) {
+                    cards.push({ num, suit });
+                }
+            }
+
+            function shuffle(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+
+            shuffle(cards);
+        
+            let html = "";
+            for (const card of cards) {
+                html += `
+                    <div class="card ${card.num} ${card.suit}">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            document.write(html);
+            document.currentScript.remove();
+        </script>
+    </div>
+</body>
+
+</html>
