@@ -159,14 +159,15 @@ h5 {
 // Team Page Styles
 .team-page {
     position: relative;
+    height: 270px;
 
     &__nav {
         opacity: 0;
         position: absolute;
         display: flex;
         gap: 0.25rem;
-        top: calc(50% - ($social-links-item-size / 2));
-        left: calc(50% - ($social-links-item-size * 3 + 0.25rem * 2));
+        top: calc(50% - ($social-links-item-size/2));
+        left: calc(50% - ($social-links-item-size/2)*3 - 0.25rem*2);
         @include transition(opacity);
     }
 
@@ -175,13 +176,13 @@ h5 {
     }
 
     &:hover {
-        background-color: $primary-color;
+        background-color: #18B5DC;
 
-        &__img {
+        .team-page__img {
             opacity: 0;
         }
 
-        &__nav {
+        .team-page__nav {
             opacity: 1;
         }
     }
@@ -227,7 +228,7 @@ h5 {
         &:hover {
             background-color: #5DCBE6;
 
-            &__icon {
+            .social-links-item__icon {
                 fill: white;
             }
         }

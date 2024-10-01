@@ -120,6 +120,7 @@ h5 {
 
 .team-page {
   position: relative;
+  height: 270px;
 }
 .team-page__nav {
   opacity: 0;
@@ -127,7 +128,7 @@ h5 {
   display: flex;
   gap: 0.25rem;
   top: calc(50% - 1.3125rem);
-  left: calc(50% - 8.375rem);
+  left: calc(50% - 3.9375rem - 0.5rem);
   transition: opacity 0.3s ease;
 }
 .team-page__img {
@@ -136,10 +137,10 @@ h5 {
 .team-page:hover {
   background-color: #18B5DC;
 }
-.team-page:hover__img {
+.team-page:hover .team-page__img {
   opacity: 0;
 }
-.team-page:hover__nav {
+.team-page:hover .team-page__nav {
   opacity: 1;
 }
 
@@ -177,6 +178,6 @@ h5 {
 .social-links-item:hover {
   background-color: #5DCBE6;
 }
-.social-links-item:hover__icon {
+.social-links-item:hover .social-links-item__icon {
   fill: white;
 }/*# sourceMappingURL=styles.css.map */
