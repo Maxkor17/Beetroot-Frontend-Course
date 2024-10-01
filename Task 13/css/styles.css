@@ -333,4 +333,34 @@ footer .copyright > h9 {
   line-height: 19.92px;
   letter-spacing: 0.1em;
   text-align: left;
+}
+
+@media screen and (max-width: 1400px) {
+  main .latest-posts .latest-posts-all-items {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .blog .blog-item {
+    flex-direction: column;
+  }
+  .blog .blog-item:last-of-type div:first-of-type {
+    order: 2;
+  }
+  .blog .blog-item:last-of-type div:last-of-type {
+    order: 1;
+  }
+  main .most-popular .most-popular-all-items {
+    grid-template-columns: 1fr;
+  }
+  main .info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
