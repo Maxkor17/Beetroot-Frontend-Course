@@ -57,3 +57,7 @@ li:last-child {
 li:hover {
     background-color: #f9f9f9;
 }
+
+.project ul {
+    width: 63%;
+}
