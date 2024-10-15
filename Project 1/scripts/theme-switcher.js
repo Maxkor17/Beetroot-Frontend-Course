@@ -7,7 +7,7 @@ darkModeToggle.addEventListener('change', () => {
     
     darkThemeLink = document.createElement('link');
     darkThemeLink.rel = 'stylesheet';
-    darkThemeLink.href = '/styles/dark-theme/dark.css'; 
+    darkThemeLink.href = 'styles/dark-theme/dark.css'; 
     darkThemeLink.id = 'dark-theme'; 
     head.appendChild(darkThemeLink);
   } else {

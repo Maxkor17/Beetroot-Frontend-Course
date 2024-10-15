@@ -1,23 +1,21 @@
 .promises {
-    width: 81.25vw;
+    width: 81.25%;
     margin: auto;
 
-    .promises__container {
+    &__container {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .promises__image {
-        background-image: url("/styles/components/promises/promises-background.png");
-        background-repeat: no-repeat;
-        background-size: cover;
+    &__image {
+        background: url("components/promises/promises-background.png") no-repeat center/cover;
         height: 33.75rem;
         width: 41.5%;
         margin-right: -14%;
     }
 
-    .promises__desc {
+    &__desc {
         height: 28.125rem;
         background-color: white;
         opacity: 0.9;
@@ -29,20 +27,20 @@
         box-sizing: border-box;
     }
 
-    .promises__title {
+    &__title {
         font-family: $secondary-font;
-        font-size: 24px;
-        line-height: 48px;
+        font-size: 1.5rem;
+        line-height: 1.5;
     }
 
-    .promises__text {
+    &__text {
         font-family: $primary-font;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 300;
-        line-height: 26px;
+        line-height: 1.44;
     }
 
-    .promises__item:last-of-type {
+    &__item:last-of-type {
         display: flex;
         justify-content: center;
         align-items: center;

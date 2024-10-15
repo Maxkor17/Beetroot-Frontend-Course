@@ -1,6 +1,6 @@
 .html {
   background-color: rgb(22, 25, 38);
-  background-image: url(/images/first-screen-image-black.png);
+  background-image: url("../../images/first-screen-image-black.png");
   color: white;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .nav .nav__link {
-  color: #FFFFFF;
+  color: white;
 }
 .nav .nav__item--active::after {
   background: linear-gradient(96.73deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
@@ -40,17 +40,18 @@
 }
 
 .info .info__content {
-  background-color: #161926;
+  background-color: rgb(22, 25, 38);
+}
+.info .info__text {
+  color: white;
 }
 
-.item .item__title {
+.item .item__title,
+.item .item__text {
   color: white;
 }
 .item .item__span {
   color: rgb(94, 143, 250);
-}
-.item .item__text {
-  color: white;
 }
 
 .video .video__span {
@@ -67,20 +68,16 @@
   border-color: rgb(2, 224, 171);
 }
 
-.reviews .reviews__span {
+.reviews .reviews__span, .reviews .contact__span, .contact .reviews__span, .contact .contact__span {
   color: rgb(94, 143, 250);
 }
-
-.contact .contact__span {
-  color: rgb(94, 143, 250);
-}
-.contact .contact__subtitle {
+.reviews .contact__subtitle, .contact .contact__subtitle {
   color: white;
 }
-.contact .contact__input {
+.reviews .contact__input, .contact .contact__input {
   background-color: inherit;
-  border-color: rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
+  border-color: white;
+  color: white;
 }
 
 .footer .footer__text {

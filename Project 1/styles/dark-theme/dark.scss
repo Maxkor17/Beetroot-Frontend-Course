@@ -1,19 +1,25 @@
+$primary-bg-color: rgba(22, 25, 38, 1);
+$primary-text-color: white;
+$secondary-color: rgb(94, 143, 250);
+$accent-color: rgba(83, 243, 205, 1);
+$hover-accent-color: rgba(2, 224, 171, 1);
+$border-color: rgba(81, 87, 115, 1);
+$footer-text-color: rgba(255, 255, 255, 0.6);
+
 .html {
-    background-color: rgba(22, 25, 38, 1);
-    background-image: url(/images/first-screen-image-black.png);
-    color: white;
+    background-color: $primary-bg-color;
+    background-image: url("../../images/first-screen-image-black.png");
+    color: $primary-text-color;
 }
 
 .header {
     background: linear-gradient(0deg, rgba(22, 25, 38, 0.02), rgba(22, 25, 38, 0.02)),
-linear-gradient(270deg, rgba(22, 25, 38, 0.5) 0%, rgba(22, 25, 38, 0) 24.1%, rgba(22, 25, 38, 0) 47.19%);
-
+                linear-gradient(270deg, rgba(22, 25, 38, 0.5) 0%, rgba(22, 25, 38, 0) 24.1%, rgba(22, 25, 38, 0) 47.19%);
 }
 
 .nav {
-
     .nav__link {
-        color: #FFFFFF;
+        color: $primary-text-color;
     }
 
     .nav__item--active::after {
@@ -22,122 +28,103 @@ linear-gradient(270deg, rgba(22, 25, 38, 0.5) 0%, rgba(22, 25, 38, 0) 24.1%, rgb
 }
 
 .hero {
-
     .hero__title {
-        color: white;
+        color: $primary-text-color;
     }
-
     .hero__span {
-        color: rgb(94, 143, 250);
+        color: $secondary-color;
     }
 }
 
 .btn {
-
     .btn__link {
-        color: rgba(83, 243, 205, 1);
+        color: $accent-color;
     }
 
     &::after {
-        background-color: rgba(83, 243, 205, 1);
+        background-color: $accent-color;
     }
 
     &:hover {
-
         .btn__link {
-            color: rgba(2, 224, 171, 1);
+            color: $hover-accent-color;
         }
 
         &::after {
-            background-color: rgba(2, 224, 171, 1);
+            background-color: $hover-accent-color;
         }
     }
 }
 
 .stats {
-
     .stats__item:not(:last-child)::after {
-        border-color: rgb(94, 143, 250);
+        border-color: $secondary-color;
     }
 }
 
 .info {
-
     .info__content {
-        background-color: #161926;
+        background-color: $primary-bg-color;
+    }
+
+    .info__text {
+        color: $primary-text-color;
     }
 }
 
 .item {
-
-    .item__title {
-        color: white;
+    .item__title,
+    .item__text {
+        color: $primary-text-color;
     }
 
     .item__span {
-        color: rgb(94, 143, 250);
-    }
-
-    .item__text {
-        color: white;
+        color: $secondary-color;
     }
 }
 
 .video {
-
     .video__span {
-        color: rgb(94, 143, 250);
+        color: $secondary-color;
     }
 }
 
 .promises {
-
     .promises__desc {
-        background-color: rgba(22, 25, 38, 1);
+        background-color: $primary-bg-color;
     }
 
-
-
     .promises__item:last-of-type {
-        border-color: rgba(81, 87, 115, 1);
-        
+        border-color: $border-color;
+
         &:hover {
-            border-color: rgba(2, 224, 171, 1);
+            border-color: $hover-accent-color;
         }
     }
 }
 
-.reviews {
-
-    .reviews__span {
-        color: rgb(94, 143, 250);
-    }
-}
-
-.contact {
-
-    .contact__span {
-        color: rgb(94, 143, 250);
+.reviews, .contact {
+    .reviews__span, .contact__span {
+        color: $secondary-color;
     }
 
     .contact__subtitle {
-        color: white;
+        color: $primary-text-color;
     }
 
     .contact__input {
         background-color: inherit;
-        border-color: rgba(255, 255, 255, 1);
-        color: rgba(255, 255, 255, 1);
+        border-color: $primary-text-color;
+        color: $primary-text-color;
     }
 }
 
 .footer {
-    
     .footer__text {
-        color: rgba(255, 255, 255, 0.6);
+        color: $footer-text-color;
     }
 
     .footer__span, .footer__nav-item {
-        color: white;
+        color: $primary-text-color;
     }
 }

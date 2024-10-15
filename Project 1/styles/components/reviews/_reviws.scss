@@ -1,42 +1,42 @@
 .reviews {
-    width: 81.25vw;
-    margin: auto;
+    width: 81.25%;
+    margin-inline: auto;
 
-    .reviews__title {
+    &__title {
         font-family: $secondary-font;
-        font-size: 40px;
-        line-height: 48px;
+        font-size: 2.5rem;
+        line-height: 1.2;
         margin-bottom: 1.25rem;
     }
 
-    .reviews__span {
+    &__span {
         font-family: $secondary-font;
         color: $secondary-color;
-        font-size: 40px;
+        font-size: 2.5rem;
         font-style: italic;
-        line-height: 48px;
+        line-height: 1.2;
     }
 
-    .reviews__subtitle {
+    &__subtitle {
         font-family: $primary-font;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 300;
-        line-height: 26px;
+        line-height: 1.5;
         margin-bottom: 3.125rem;
     }
 
-    .reviews__content {
+    &__content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 1.875rem;
     }
     
-    .reviews__item {
+    &__item {
         position: relative;
         padding: 2.5rem 5rem;
     }
 
-    .reviews__img {
+    &__img {
         position: absolute;
         top: 0;
         left: 0;
@@ -46,18 +46,18 @@
         z-index: -1;
     }
 
-    .reviews__text {
+    &__text {
         font-family: $primary-font;
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 1rem;
+        line-height: 1.625;
         color: white;
     }
 
-    .reviews__author {
+    &__author {
         font-family: $secondary-font;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-style: italic;
-        line-height: 20px;
+        line-height: 1.25;
         letter-spacing: 0.08em;
         color: white;
         margin-top: 1.625rem;

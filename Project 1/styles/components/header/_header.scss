@@ -1,6 +1,17 @@
 .header {
 
-    .header__content {
+    &--height {
+        height: 5rem;
+    }
+
+    &--blur {
+        background: 
+            linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)),
+            linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.244) 24.1%, rgba(255, 255, 255, 0) 47.19%);
+        backdrop-filter: blur(9px);
+    }
+
+    &__content {
         height: 100%;
         width: 81.25%;
         display: flex;
@@ -8,16 +19,4 @@
         align-items: center;
         margin: 0 auto;
     }
-}
-
-
-.header--height {
-    height: 5rem;
-}
-
-.header--blur {
-    background: 
-    linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)),
-    linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.244636) 24.1%, rgba(255, 255, 255, 0) 47.19%);
-    backdrop-filter: blur(9px);
 }

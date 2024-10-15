@@ -4,13 +4,13 @@
     gap: 5rem;
     width: 48%;
 
-    .stats__item {
+    &__item {
         position: relative;
 
         &:not(:last-child)::after {
             content: "";
             display: block;
-            width: 100px;
+            width: 20%;
             border: 1px solid $secondary-color;
             position: absolute;
             left: 50%;
@@ -19,27 +19,27 @@
         }
     }
 
-    .stats__num {
+    &__num {
         font-family: $secondary-font;
-        font-size: 68px;
-        line-height: 72px;
+        font-size: 4.25rem;
+        line-height: 1;
         text-align: center;
 
         &::before {
             content: "$";
             font-family: $secondary-font;
-            font-size: 40px;
-            line-height: 50px;
+            font-size: 2.5rem;
+            line-height: 1;
             text-align: center;
             color: #E4E4E4;
         }
     }
 
-    .stats__desc {
+    &__desc {
         font-family: $primary-font;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 300;
-        line-height: 26px;
+        line-height: 1.5;
         text-align: center;
     }
 }

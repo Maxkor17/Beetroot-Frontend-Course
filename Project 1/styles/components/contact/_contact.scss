@@ -1,53 +1,53 @@
 .contact {
-    width: 81.25vw;
+    width: 81.25%;
     margin: auto;
     border-top: 1px solid #E4E4E4;
 
-    .contact__container {
+    &__container {
         display: flex;
         margin-top: 3.75rem;
         justify-content: space-between;
         align-items: center;
     }
 
-    .contact__content {
+    &__content {
         flex-basis: 35%;
     }
 
-    .contact__title {
+    &__title {
         font-family: $secondary-font;
-        font-size: 40px;
+        font-size: 2.5rem;
         line-height: 39px;
         margin-bottom: 1.875rem;
     }
 
-    .contact__span {
+    &__span {
         font-family: $secondary-font;
         color: $secondary-color;
-        font-size: 40px;
+        font-size: 2.5rem;
         font-style: italic;
         line-height: 39px;
     }
 
-    .contact__subtitle {
+    &__subtitle {
         font-family: $primary-font;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 300;
         line-height: 26px;
         color: $primary-color;
     }
 
-    .contact__form {
+    &__form {
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
         flex-basis: 35%;
     }
 
-    .contact__input {
+    &__input {
         height: 2rem;
         font-family: $secondary-font;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-style: italic;
         line-height: 20px;
         letter-spacing: 0.08em;
@@ -56,5 +56,10 @@
         opacity: 0.5;
         border-bottom: 1px solid rgba(38, 42, 63, 0.1);
         outline: none;
+
+        &:focus {
+            border-bottom: 1px solid $primary-color;
+            opacity: 1;
+        }
     }
 }

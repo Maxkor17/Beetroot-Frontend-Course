@@ -3,7 +3,7 @@
     right: 1%;
     bottom: 1%;
     
-    .stylemode__input {
+    &__input {
         width: 0;
         height: 0;
         visibility: hidden;
@@ -19,15 +19,15 @@
         }
     }
 
-    .stylemode__input:checked + .stylemode__label .stylemode__sun {
+    &__input:checked + &__label &__sun {
         fill: #7e7e7e;
     }
 
-    .stylemode__input:checked + .stylemode__label .stylemode__moon {
+    &__input:checked + &__label &__moon {
         fill: #fff;
     }
 
-    .stylemode__label {
+    &__label {
         width: 125px;
         height: 50px;
         position: relative;
@@ -56,7 +56,7 @@
         }
     }
 
-    .stylemode__svg {
+    &__svg {
         position: absolute;
         width: 30px;
         top: 10px;
@@ -64,12 +64,12 @@
         transition: 0.3s;
     }
 
-    .stylemode__sun {
+    &__sun {
         left: 10px;
         fill: #fff;
     }
 
-    .stylemode__moon {
+    &__moon {
         left: 85px;
         fill: #7e7e7e;
     }

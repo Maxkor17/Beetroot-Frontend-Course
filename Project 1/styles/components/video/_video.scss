@@ -1,18 +1,18 @@
 .video {
-    width: 81.25vw;
+    width: 81.25%;
     margin: auto;
 
-    .video__container {
+    &__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .video__tablet {
-        width: 970px;
-        height: 601px;
-        background-image: url("/styles/components/video/tablet.png");
+    &__tablet {
+        width: 60.625rem;
+        height: 37.5rem;
+        background-image: url("components/video/tablet.png");
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,41 +23,41 @@
             position: absolute;
             height: 90%;
             width: 90%;
-            background-image: url("/styles/components/video/screensaver-video.png");
+            background-image: url("components/video/screensaver-video.png");
             background-size: contain;
             transform: translateX(-1rem);
         }
     }
     
-    .video__video {
+    &__video {
         height: 89.7%;
-        width: 870px;
+        width: 54.375rem;
         margin: 0 auto;
         opacity: 0;
         transform: translateX(-1rem);
     }
 
-    .video__info {
+    &__info {
         margin-top: 3.125rem;
         width: 60%;
     }
 
-    .video__title {
+    &__title {
         font-family: $secondary-font;
-        font-size: 40px;
-        line-height: 48px;
+        font-size: 2.5rem;
+        line-height: 1;
     }
 
-    .video__span {
+    &__span {
         color: $secondary-color;
         font-style: italic;  
     }
 
-    .video__text {
+    &__text {
         font-family: $primary-font;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 300;
-        line-height: 26px;
+        line-height: 1.44;
         opacity: 0.8;
     }
 }
