@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+@import "_variables";
+
+@import "_reset";
+
+.html {
+    background-image: url("/images/first-screen-image.png");
+    background-size: 100vw 150vh;
+    background-repeat: no-repeat;
+}
+
+.body {
+    padding-top: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7.5rem;
+}
+
+@import "components/header/_header";
+
+@import "components/logo/_logo";
+
+@import "components/nav/_nav";
+
+@import "components/hero/_hero";
+
+@import "components/bth/_bth";
+
+@import "components/info/_info";
+
+@import "components/stats/_stats";
+
+@import "components/benefits/_benefits";
+
+@import "components/item/_item";
+
+@import "components/quote/_quote";
+
+@import "components/video/_video";
+
+@import "components/promises/_promises";
+
+@import "components/reviews/_reviws";
+
+@import "components/contact/_contact";
+
+@import "components/footer/_footer";
+
+@import "components/stylemode/_stylemode";

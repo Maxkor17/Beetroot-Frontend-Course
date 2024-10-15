@@ -1,0 +1,30 @@
+.hero {
+    .hero__title {
+        font-family: $secondary-font;
+        font-size: 44px;
+        color: $primary-color;
+        margin-bottom: 1.875rem;
+    }
+
+    .hero__span {
+        font-family: $secondary-font;
+        font-size: 44px;
+        font-style: italic;
+        line-height: 52px;
+        color: $secondary-color;
+    }
+
+    .hero__text {
+        font-family: $primary-font;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+        margin-bottom: 3.125rem;
+    }
+}
+
+.hero__content--position {
+    width: 36%;
+    padding-top: 9.375rem;
+    padding-left: 9.375%;
+}

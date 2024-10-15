@@ -1,0 +1,30 @@
+.nav {
+
+    .nav__list {
+        display: flex;
+        justify-content: center;
+        gap: 1.875rem;
+    }
+
+    .nav__link {
+        font-family: "Lato";
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.08em;
+        color: $primary-color;
+    }
+
+    .nav__item--active {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $button-color-default;
+            height: 3px;
+            width: 100%;
+            top: 20px;
+            left: 0px;
+        }
+    }
+}

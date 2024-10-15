@@ -1,0 +1,42 @@
+.btn {
+    font-family: $primary-font;
+    background-color: inherit;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    border: none;
+    position: relative;
+    z-index: 1;
+    
+
+    .btn__link {
+        color: $button-color-default;
+        transition: 0.3s;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: $button-color-default;
+        width: 97%;
+        height: 13px;
+        top: 11px;
+        left: 10px;
+        opacity: 0.3;
+        z-index: 0;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        
+        &::after {
+            background-color: $button-color-hover;
+        }
+
+        .btn__link {
+            color: $button-color-hover;
+        }
+    }
+}

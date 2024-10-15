@@ -1,0 +1,37 @@
+.info {
+    display: flex;
+    width: 81.25vw;
+    margin: auto;
+
+    .info__img {
+        background-image: url("/styles/components/info/info.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 48%;
+        height: 41.875rem;
+        margin-right: -170px;
+    }
+
+    .info__content {
+        display: flex;
+        background-color: #FFFFFF;
+        opacity: 0.9;
+        width: 65%;
+        height: 36.25rem;
+        padding-top: 2.8125rem;
+        margin-top: 2.8125rem;
+        box-sizing: border-box;
+    }
+
+    .info__aside {
+        width: 52%;
+    }
+
+    .info__text {
+        font-family: $primary-font;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+        margin-bottom: 3.125rem;
+    }
+}

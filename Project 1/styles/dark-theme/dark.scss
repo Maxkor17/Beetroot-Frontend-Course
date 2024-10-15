@@ -1,0 +1,143 @@
+.html {
+    background-color: rgba(22, 25, 38, 1);
+    background-image: url(/images/first-screen-image-black.png);
+    color: white;
+}
+
+.header {
+    background: linear-gradient(0deg, rgba(22, 25, 38, 0.02), rgba(22, 25, 38, 0.02)),
+linear-gradient(270deg, rgba(22, 25, 38, 0.5) 0%, rgba(22, 25, 38, 0) 24.1%, rgba(22, 25, 38, 0) 47.19%);
+
+}
+
+.nav {
+
+    .nav__link {
+        color: #FFFFFF;
+    }
+
+    .nav__item--active::after {
+        background: linear-gradient(96.73deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
+    }
+}
+
+.hero {
+
+    .hero__title {
+        color: white;
+    }
+
+    .hero__span {
+        color: rgb(94, 143, 250);
+    }
+}
+
+.btn {
+
+    .btn__link {
+        color: rgba(83, 243, 205, 1);
+    }
+
+    &::after {
+        background-color: rgba(83, 243, 205, 1);
+    }
+
+    &:hover {
+
+        .btn__link {
+            color: rgba(2, 224, 171, 1);
+        }
+
+        &::after {
+            background-color: rgba(2, 224, 171, 1);
+        }
+    }
+}
+
+.stats {
+
+    .stats__item:not(:last-child)::after {
+        border-color: rgb(94, 143, 250);
+    }
+}
+
+.info {
+
+    .info__content {
+        background-color: #161926;
+    }
+}
+
+.item {
+
+    .item__title {
+        color: white;
+    }
+
+    .item__span {
+        color: rgb(94, 143, 250);
+    }
+
+    .item__text {
+        color: white;
+    }
+}
+
+.video {
+
+    .video__span {
+        color: rgb(94, 143, 250);
+    }
+}
+
+.promises {
+
+    .promises__desc {
+        background-color: rgba(22, 25, 38, 1);
+    }
+
+
+
+    .promises__item:last-of-type {
+        border-color: rgba(81, 87, 115, 1);
+        
+        &:hover {
+            border-color: rgba(2, 224, 171, 1);
+        }
+    }
+}
+
+.reviews {
+
+    .reviews__span {
+        color: rgb(94, 143, 250);
+    }
+}
+
+.contact {
+
+    .contact__span {
+        color: rgb(94, 143, 250);
+    }
+
+    .contact__subtitle {
+        color: white;
+    }
+
+    .contact__input {
+        background-color: inherit;
+        border-color: rgba(255, 255, 255, 1);
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+.footer {
+    
+    .footer__text {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer__span, .footer__nav-item {
+        color: white;
+    }
+}

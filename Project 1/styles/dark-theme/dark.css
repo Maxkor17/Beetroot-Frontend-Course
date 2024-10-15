@@ -1,0 +1,91 @@
+.html {
+  background-color: rgb(22, 25, 38);
+  background-image: url(/images/first-screen-image-black.png);
+  color: white;
+}
+
+.header {
+  background: linear-gradient(0deg, rgba(22, 25, 38, 0.02), rgba(22, 25, 38, 0.02)), linear-gradient(270deg, rgba(22, 25, 38, 0.5) 0%, rgba(22, 25, 38, 0) 24.1%, rgba(22, 25, 38, 0) 47.19%);
+}
+
+.nav .nav__link {
+  color: #FFFFFF;
+}
+.nav .nav__item--active::after {
+  background: linear-gradient(96.73deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
+}
+
+.hero .hero__title {
+  color: white;
+}
+.hero .hero__span {
+  color: rgb(94, 143, 250);
+}
+
+.btn .btn__link {
+  color: rgb(83, 243, 205);
+}
+.btn::after {
+  background-color: rgb(83, 243, 205);
+}
+.btn:hover .btn__link {
+  color: rgb(2, 224, 171);
+}
+.btn:hover::after {
+  background-color: rgb(2, 224, 171);
+}
+
+.stats .stats__item:not(:last-child)::after {
+  border-color: rgb(94, 143, 250);
+}
+
+.info .info__content {
+  background-color: #161926;
+}
+
+.item .item__title {
+  color: white;
+}
+.item .item__span {
+  color: rgb(94, 143, 250);
+}
+.item .item__text {
+  color: white;
+}
+
+.video .video__span {
+  color: rgb(94, 143, 250);
+}
+
+.promises .promises__desc {
+  background-color: rgb(22, 25, 38);
+}
+.promises .promises__item:last-of-type {
+  border-color: rgb(81, 87, 115);
+}
+.promises .promises__item:last-of-type:hover {
+  border-color: rgb(2, 224, 171);
+}
+
+.reviews .reviews__span {
+  color: rgb(94, 143, 250);
+}
+
+.contact .contact__span {
+  color: rgb(94, 143, 250);
+}
+.contact .contact__subtitle {
+  color: white;
+}
+.contact .contact__input {
+  background-color: inherit;
+  border-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+
+.footer .footer__text {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer .footer__span, .footer .footer__nav-item {
+  color: white;
+}/*# sourceMappingURL=dark.css.map */

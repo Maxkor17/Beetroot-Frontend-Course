@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solis</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body class="body">
@@ -14,7 +14,7 @@
         <div class="header__content">
             <div class="logo">
                 <a class="logo__link" href="index.html">
-                    <img class="logo__img" src="logo.svg" alt="Solis Logo">
+                    <img class="logo__img" src="/styles/components/logo/logo.svg" alt="Solis Logo">
                 </a>
             </div>
             <nav class="nav">
@@ -37,7 +37,7 @@
             <p class="hero__text">We are bringing real solutions to the payments world by<br>leveraging public
                 blockchains.
             </p>
-            <a class="btn" href="#join-now">JOIN NOW</a>
+            <button class="btn"><a class="btn__link" href="#join-now">JOIN NOW</a></button>
         </div>
     </section>
 
@@ -68,7 +68,7 @@
                     The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability
                     and accessibility which are currently preventing the stablecoin market from reaching critical mass.
                 </p>
-                <a class="btn" href="#contact-sales">CONTACT SALES</a>
+                <button class="btn"><a class="btn__link" href="#contact-sales">CONTACT SALES</a></button>
             </div>
         </div>
     </section>
@@ -127,7 +127,7 @@
     <section class="quote">
         <div class="quote__container">
             <div class="qoute__item">
-                <img class="quote__icon" src="quote-icon.svg" alt="Quote Icon">
+                <img class="quote__icon" src="/styles/components/quote/quote-icon.svg" alt="Quote Icon">
                 <p class="quote__text">Solis Group serves as a liquidity nexus that gives stablecoin issuers, holders
                     and
                     exchanges certainty over access and liquidity</p>
@@ -177,7 +177,7 @@
                     <p class="promises__text">LBTC / Lightning and other sidechain swaps</p>
                 </div>
                 <div class="promises__item">
-                    <a class="btn" href="#join-now">JOIN NOW</a>
+                    <button class="btn promises__btn"><a class="btn__link" href="#join-now">JOIN NOW</a></button>
                 </div>
 
             </div>
@@ -187,11 +187,11 @@
     <section class="reviews">
         <div class="reviews__container">
             <h3 class="reviews__title">Client <span class="reviews__span">reviews</span></h3>
-            <p class="reviews__subtitle">Happy clients, happy us. Read our client reviews about the work process and
+            <p class="reviews__subtitle">Happy clients, happy us. Read our client reviews<br>about the work process and
                 results.</p>
             <div class="reviews__content">
                 <div class="reviews__item">
-                    <img class="reviews__img" src="review-1.png" alt="Review Background">
+                    <img class="reviews__img" src="/styles/components/reviews/review-1.png" alt="Review Background">
                     <p class="reviews__text">
                         Solis did a great job. Whether providing direct development support or giving us the opportunity
                         to
@@ -205,7 +205,7 @@
                     </p>
                 </div>
                 <div class="reviews__item">
-                    <img class="reviews__img" src="review-2.png" alt="Review Background">
+                    <img class="reviews__img" src="/styles/components/reviews/review-2.png" alt="Review Background">
                     <p class="reviews__text">
                         Solis is a cutting edge company and knows the importance of excellence. Having been in business
                         for
@@ -217,7 +217,7 @@
                     </p>
                 </div>
                 <div class="reviews__item">
-                    <img class="reviews__img" src="review-3.png" alt="Review Background">
+                    <img class="reviews__img" src="/styles/components/reviews/review-3.png" alt="Review Background">
                     <p class="reviews__text">
                         I can’t say enough about how knowledgeable Toinette Rorie is in the area of Web Development. She
                         indeed is a developer and can build a site from scratch. She understands functionality and is
@@ -236,11 +236,19 @@
         <div class="contact__container">
             <div class="contact__content">
                 <h3 class="contact__title">Contact <span class="contact__span">our sales team</span></h3>
-                <p class="contact__subtitle">Our team is happy to answer your sales questions.Fill out the form and we’ll be in touch as soon as possible.</p>
+                <p class="contact__subtitle">Our team is happy to answer your sales questions.<br>Fill out the form and
+                    we’ll be in touch as soon as possible.</p>
             </div>
-            <div class="contact_form">
-
-            </div>
+            <form class="contact__form">
+                <input type="text" class="contact__input" name="name" placeholder="Your name" required minlength="2">
+                <input type="email" class="contact__input" name="email" placeholder="Email" required>
+                <input type="text" class="contact__input" name="message" placeholder="Tell more" required
+                    minlength="10">
+                <div>
+                    <button class="btn" type="submit"><a class="btn__link" href="#send-request">SEND
+                            REQUEST</a></button>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -252,6 +260,32 @@
             <a class="footer__nav-item" href="#">Privacy Policy</a>
         </nav>
     </footer>
+
+    <div class="stylemode">
+        <input class="stylemode__input" type="checkbox" id="darkmode-toggle" />
+        <label class="stylemode__label" for="darkmode-toggle">
+            <svg class="stylemode__sun stylemode__svg" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 3V0H9V3H7Z" />
+                <path d="M9 13V16H7V13H9Z" />
+                <path
+                    d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" />
+                <path d="M0 9H3V7H0V9Z" />
+                <path d="M16 7H13V9H16V7Z" />
+                <path d="M3.75735 5.17157L1.63603 3.05025L3.05025 1.63603L5.17157 3.75735L3.75735 5.17157Z" />
+                <path d="M12.2426 10.8284L14.364 12.9497L12.9497 14.364L10.8284 12.2426L12.2426 10.8284Z" />
+                <path d="M3.05025 14.364L5.17157 12.2426L3.75735 10.8284L1.63603 12.9498L3.05025 14.364Z" />
+                <path d="M12.9497 1.63604L10.8284 3.75736L12.2426 5.17158L14.364 3.05026L12.9497 1.63604Z" />
+            </svg>
+            <svg class="stylemode__moon stylemode__svg" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.39703 11.6315C3.39703 16.602 7.42647 20.6315 12.397 20.6315C15.6858 20.6315 18.5656 18.8664 20.1358 16.23C16.7285 17.3289 12.6922 16.7548 9.98282 14.0455C7.25201 11.3146 6.72603 7.28415 7.86703 3.89293C5.20697 5.47927 3.39703 8.38932 3.39703 11.6315ZM21.187 13.5851C22.0125 13.1021 23.255 13.6488 23 14.5706C21.7144 19.2187 17.4543 22.6315 12.397 22.6315C6.3219 22.6315 1.39703 17.7066 1.39703 11.6315C1.39703 6.58874 4.93533 2.25845 9.61528 0.999986C10.5393 0.751502 11.0645 1.99378 10.5641 2.80935C8.70026 5.84656 8.83194 10.0661 11.397 12.6312C13.9319 15.1662 18.1365 15.3702 21.187 13.5851Z" />
+            </svg>
+        </label>
+    </div>
+
+    <script src="/scripts/theme-switcher.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,42 @@
+.quote {
+    width: 81.25vw;
+    margin: auto;
+
+    .quote__container {
+        background-image: url("/styles/components/quote/quote-background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .qoute__item {
+        width: 50%;
+        margin: auto;
+        padding: 6.25rem;
+        position: relative;
+    }
+
+    .quote__icon {
+        position: absolute;
+        top: 4.375rem;
+        left: 2.25rem;
+    }
+
+    .quote__text {
+        font-family: $primary-font;
+        font-size: 32px;
+        line-height: 46px;
+        letter-spacing: 0.04em;
+        font-style: italic;
+        color: white;
+        margin-bottom: 2.5rem;
+    }
+
+    .quote__author {
+        font-family: $secondary-font;
+        font-size: 20px;
+        font-style: italic;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+        color: #FFFFFF;
+    }
+}

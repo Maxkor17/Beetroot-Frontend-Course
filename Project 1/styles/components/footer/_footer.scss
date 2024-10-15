@@ -1,0 +1,38 @@
+.footer {
+    height: 5.375rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 16rem;
+    border-top: 1px solid #E4E4E4;
+
+    .footer__text {
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 26px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .footer__span {
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.08em;
+        color: #262A3F;
+    }
+
+    .footer__nav {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .footer__nav-item {
+        font-family: $primary-font;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.08em;
+        color: $primary-color;
+    }
+}

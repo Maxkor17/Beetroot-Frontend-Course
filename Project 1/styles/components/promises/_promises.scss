@@ -1,0 +1,56 @@
+.promises {
+    width: 81.25vw;
+    margin: auto;
+
+    .promises__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .promises__image {
+        background-image: url("/styles/components/promises/promises-background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 33.75rem;
+        width: 41.5%;
+        margin-right: -14%;
+    }
+
+    .promises__desc {
+        height: 28.125rem;
+        background-color: white;
+        opacity: 0.9;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 4.375rem;
+        padding: 4.6875rem 0 4.6875rem 4.375rem;
+        width: 58.5%;
+        box-sizing: border-box;
+    }
+
+    .promises__title {
+        font-family: $secondary-font;
+        font-size: 24px;
+        line-height: 48px;
+    }
+
+    .promises__text {
+        font-family: $primary-font;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+    }
+
+    .promises__item:last-of-type {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #E4E4E4;
+        transition: 0.3s;
+
+        &:hover {
+            border-color: $button-color-hover;
+        }
+    }
+}
