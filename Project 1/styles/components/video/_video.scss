@@ -10,9 +10,11 @@
     }
 
     &__tablet {
-        width: 60.625rem;
-        height: 37.6rem;
+        width: 80%;
+        aspect-ratio: 16 / 9;
         background-image: url("components/video/tablet.png");
+        background-repeat: no-repeat;
+        background-size: contain;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,6 +26,7 @@
             height: 90%;
             width: 90%;
             background-image: url("components/video/screensaver-video.png");
+            background-repeat: no-repeat;
             background-size: contain;
             transform: translateX(-1rem);
         }
