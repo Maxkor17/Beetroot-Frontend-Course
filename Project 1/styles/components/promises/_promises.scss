@@ -1,6 +1,4 @@
 .promises {
-    width: 81.25%;
-    margin: auto;
 
     &__container {
         display: flex;
@@ -16,7 +14,7 @@
     }
 
     &__desc {
-        height: 28.125rem;
+        height: auto;
         background-color: white;
         opacity: 0.9;
         display: grid;
@@ -49,6 +47,40 @@
 
         &:hover {
             border-color: $button-color-hover;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .promises {
+
+        &__image {
+            display: none;
+        }
+
+        &__desc {
+            background: url("components/promises/promises-background.png") no-repeat center/cover;
+            box-sizing: border-box;
+            width: auto;
+            padding: 4.6875rem;
+        }
+
+        &__item {
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 550px) { 
+    .promises {
+
+        &__desc {
+            grid-template-columns: 1fr;
+        }
+
+        &__btn {
+            height: 2rem;
         }
     }
 }

@@ -1,0 +1,16 @@
+.main {
+    padding-top: 22rem;
+    width: 81.25%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 7.5rem;
+}
+
+@media (max-width: 768px) {
+
+    .main {
+        width: 95%;
+        padding-top: 7.5rem;
+    }
+}

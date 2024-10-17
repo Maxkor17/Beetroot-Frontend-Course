@@ -1,6 +1,4 @@
 .video {
-    width: 81.25%;
-    margin: auto;
 
     &__container {
         display: flex;
@@ -19,6 +17,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        margin-bottom: 3.125rem;
 
         &::before {
             content: "";
@@ -38,11 +37,6 @@
         margin: 0 auto;
         opacity: 0;
         transform: translateX(-1rem);
-    }
-
-    &__info {
-        margin-top: 3.125rem;
-        width: 60%;
     }
 
     &__title {

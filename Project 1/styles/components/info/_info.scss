@@ -1,14 +1,12 @@
 .info {
     display: flex;
-    width: 81.25%;
-    margin-inline: auto;
 
     &__img {
         background-image: url("components/info/info.png");
         background-repeat: no-repeat;
         background-position: center;
         width: 48%;
-        height: 41.875rem;
+        flex: 1;
         margin-right: -15%;
     }
 
@@ -17,9 +15,8 @@
         background-color: #FFFFFF;
         opacity: 0.9;
         width: 65%;
-        height: 36.25rem;
-        padding-top: 2.8125rem;
-        margin-top: 2.8125rem;
+        padding: 2.8125rem 0;
+        margin: 2.8125rem 0;
         box-sizing: border-box;
     }
 
@@ -34,5 +31,36 @@
         line-height: 26px;
         margin-bottom: 3.125rem;
         opacity: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .info {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__content {
+            background-image: url("components/info/info.png");
+            background-size: cover;
+            margin: 0;
+            width: 100%;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #FFFFFF;
+                opacity: 0.5;
+                z-index: 0;
+            }
+        }
     }
 }

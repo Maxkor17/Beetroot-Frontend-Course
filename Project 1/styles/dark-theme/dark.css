@@ -1,4 +1,4 @@
-.html {
+html {
   background-color: rgb(22, 25, 38);
   background-image: url("../../images/first-screen-image-black.png");
   color: white;
@@ -11,7 +11,7 @@
 .nav .nav__link {
   color: white;
 }
-.nav .nav__item--active::after {
+.nav .nav__link--active::after {
   background: linear-gradient(96.73deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
 }
 
@@ -68,13 +68,18 @@
   border-color: rgb(2, 224, 171);
 }
 
-.reviews .reviews__span, .reviews .contact__span, .contact .reviews__span, .contact .contact__span {
+.reviews .reviews__span,
+.reviews .contact__span,
+.contact .reviews__span,
+.contact .contact__span {
   color: rgb(94, 143, 250);
 }
-.reviews .contact__subtitle, .contact .contact__subtitle {
+.reviews .contact__subtitle,
+.contact .contact__subtitle {
   color: white;
 }
-.reviews .contact__input, .contact .contact__input {
+.reviews .contact__input,
+.contact .contact__input {
   background-color: inherit;
   border-color: white;
   color: white;
@@ -83,6 +88,20 @@
 .footer .footer__text {
   color: rgba(255, 255, 255, 0.6);
 }
-.footer .footer__span, .footer .footer__nav-item {
+.footer .footer__span,
+.footer .footer__nav-item {
   color: white;
 }
+
+@media (max-width: 768px) {
+  .nav__label::after, .nav__label::before,
+  .nav__label .nav__span {
+    background-color: white;
+  }
+  .nav .nav__link {
+    color: rgb(22, 25, 38);
+  }
+  .info__content::before {
+    background-color: rgb(22, 25, 38);
+  }
+}/*# sourceMappingURL=dark.css.map */

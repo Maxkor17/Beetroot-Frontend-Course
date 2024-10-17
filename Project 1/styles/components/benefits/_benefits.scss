@@ -1,6 +1,4 @@
 .benefits {
-    width: 81.25%;
-    margin-inline: auto;
 
     &__container {
         display: grid;
@@ -11,5 +9,16 @@
 
     &__item {
         border-top: 1px solid #E4E4E4;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .benefits {
+        width: 100%;
+    
+        &__container {
+            grid-template-columns: 1fr;
+        }
     }
 }

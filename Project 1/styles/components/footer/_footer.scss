@@ -33,3 +33,18 @@
         color: #262A3F;
     }
 }
+
+@media (max-width: 1280px) {
+
+    .footer {
+        gap: 8rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer {
+        gap: 1rem;
+        flex-direction: column;
+    }
+}

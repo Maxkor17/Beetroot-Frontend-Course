@@ -4,20 +4,16 @@
 
 @import "layouts/_reset";
 
-.html {
+html {
     background-image: url("../images/first-screen-image.png");
-    background-size: 100vw 150vh;
     background-repeat: no-repeat;
-}
-
-.body {
-    padding-top: 1.875rem;
-    display: flex;
-    flex-direction: column;
-    gap: 7.5rem;
+    background-size: 100% 150vh;
+    background-position: center top;
 }
 
 @import "components/header/_header";
+
+@import "components/main/_main";
 
 @import "components/logo/_logo";
 
@@ -48,5 +44,3 @@
 @import "components/footer/_footer";
 
 @import "components/stylemode/_stylemode";
-
-@import "layouts/_media";

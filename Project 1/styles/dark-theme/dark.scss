@@ -6,7 +6,7 @@ $hover-accent-color: rgba(2, 224, 171, 1);
 $border-color: rgba(81, 87, 115, 1);
 $footer-text-color: rgba(255, 255, 255, 0.6);
 
-.html {
+html {
     background-color: $primary-bg-color;
     background-image: url("../../images/first-screen-image-black.png");
     color: $primary-text-color;
@@ -14,7 +14,7 @@ $footer-text-color: rgba(255, 255, 255, 0.6);
 
 .header {
     background: linear-gradient(0deg, rgba(22, 25, 38, 0.02), rgba(22, 25, 38, 0.02)),
-                linear-gradient(270deg, rgba(22, 25, 38, 0.5) 0%, rgba(22, 25, 38, 0) 24.1%, rgba(22, 25, 38, 0) 47.19%);
+        linear-gradient(270deg, rgba(22, 25, 38, 0.5) 0%, rgba(22, 25, 38, 0) 24.1%, rgba(22, 25, 38, 0) 47.19%);
 }
 
 .nav {
@@ -22,7 +22,7 @@ $footer-text-color: rgba(255, 255, 255, 0.6);
         color: $primary-text-color;
     }
 
-    .nav__item--active::after {
+    .nav__link--active::after {
         background: linear-gradient(96.73deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
     }
 }
@@ -31,6 +31,7 @@ $footer-text-color: rgba(255, 255, 255, 0.6);
     .hero__title {
         color: $primary-text-color;
     }
+
     .hero__span {
         color: $secondary-color;
     }
@@ -73,6 +74,7 @@ $footer-text-color: rgba(255, 255, 255, 0.6);
 }
 
 .item {
+
     .item__title,
     .item__text {
         color: $primary-text-color;
@@ -103,8 +105,11 @@ $footer-text-color: rgba(255, 255, 255, 0.6);
     }
 }
 
-.reviews, .contact {
-    .reviews__span, .contact__span {
+.reviews,
+.contact {
+
+    .reviews__span,
+    .contact__span {
         color: $secondary-color;
     }
 
@@ -124,7 +129,39 @@ $footer-text-color: rgba(255, 255, 255, 0.6);
         color: $footer-text-color;
     }
 
-    .footer__span, .footer__nav-item {
+    .footer__span,
+    .footer__nav-item {
         color: $primary-text-color;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .nav {
+
+        &__label {
+
+            &::after,
+            &::before,
+            .nav__span {
+                background-color: $primary-text-color;
+            }
+    
+        }
+
+        .nav__link {
+            color: $primary-bg-color;
+        }
+    }
+
+    .info {
+        &__content {
+
+            &::before {
+                background-color: $primary-bg-color;
+            }
+        }
+
     }
 }
