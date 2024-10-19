@@ -1,0 +1,16 @@
+.button {
+    @include flex-center(true);
+
+    height: $button-height;
+    padding-inline: 35px;
+    font-size: 20px;
+    color: $color-light;
+    background-color: $color-dark;
+    border: $border;
+    border-radius: $border-radius;
+
+    @include hover {
+        color: $color-dark;
+        background-color: $color-accent;
+    }
+}
