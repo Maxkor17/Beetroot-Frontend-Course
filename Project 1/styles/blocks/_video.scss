@@ -10,7 +10,7 @@
     &__tablet {
         width: 80%;
         aspect-ratio: 16 / 9;
-        background-image: url("components/video/tablet.png");
+        background-image: url("../images/tablet.png");
         background-repeat: no-repeat;
         background-size: contain;
         display: flex;
@@ -24,7 +24,7 @@
             position: absolute;
             height: 90%;
             width: 90%;
-            background-image: url("components/video/screensaver-video.png");
+            background-image: url("../images/screensaver-video.png");
             background-repeat: no-repeat;
             background-size: contain;
             transform: translateX(-1rem);

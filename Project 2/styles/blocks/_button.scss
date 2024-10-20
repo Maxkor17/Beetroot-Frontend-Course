@@ -13,4 +13,9 @@
         color: $color-dark;
         background-color: $color-accent;
     }
+
+    &--transparent {
+        color: $color-dark;
+        background-color: transparent;
+    }
 }

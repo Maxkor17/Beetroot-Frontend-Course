@@ -1,4 +1,11 @@
-.main {
+html {
+    background-image: url("../images/first-screen-image.png");
+    background-repeat: no-repeat;
+    background-size: 100% 150vh;
+    background-position: center top;
+}
+
+main {
     padding-top: 22rem;
     width: 81.25%;
     margin-inline: auto;
@@ -9,7 +16,7 @@
 
 @media (max-width: 768px) {
 
-    .main {
+    main {
         width: 95%;
         padding-top: 7.5rem;
     }

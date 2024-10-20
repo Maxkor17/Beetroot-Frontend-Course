@@ -2,7 +2,7 @@
     display: flex;
 
     &__img {
-        background-image: url("components/info/info.png");
+        background-image: url("../images/info.png");
         background-repeat: no-repeat;
         background-position: center;
         width: 48%;
@@ -44,7 +44,7 @@
         align-items: center;
 
         &__content {
-            background-image: url("components/info/info.png");
+            background-image: url("../images/info.png");
             background-size: cover;
             margin: 0;
             width: 100%;

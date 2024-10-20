@@ -1,46 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-@import "layouts/_variables";
+@import 
+    "reset",    
+    "variables",
+    "globals";
 
-@import "layouts/_reset";
-
-html {
-    background-image: url("../images/first-screen-image.png");
-    background-repeat: no-repeat;
-    background-size: 100% 150vh;
-    background-position: center top;
-}
-
-@import "components/header/_header";
-
-@import "components/main/_main";
-
-@import "components/logo/_logo";
-
-@import "components/nav/_nav";
-
-@import "components/hero/_hero";
-
-@import "components/btn/_btn";
-
-@import "components/info/_info";
-
-@import "components/stats/_stats";
-
-@import "components/benefits/_benefits";
-
-@import "components/item/_item";
-
-@import "components/quote/_quote";
-
-@import "components/video/_video";
-
-@import "components/promises/_promises";
-
-@import "components/reviews/_reviws";
-
-@import "components/contact/_contact";
-
-@import "components/footer/_footer";
-
-@import "components/stylemode/_stylemode";
+@import 
+    "blocks/header",
+    "blocks/logo",
+    "blocks/nav",
+    "blocks/hero",
+    "blocks/btn",
+    "blocks/info",
+    "blocks/stats",
+    "blocks/benefits",
+    "blocks/item",
+    "blocks/quote",
+    "blocks/video",
+    "blocks/promises",
+    "blocks/reviws",
+    "blocks/contact",
+    "blocks/footer",
+    "blocks/stylemode";
