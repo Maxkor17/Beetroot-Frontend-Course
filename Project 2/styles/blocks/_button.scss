@@ -1,21 +1,21 @@
 .button {
     @include flex-center(true);
 
-    height: $button-height;
+    height: var(--button-height);
     padding-inline: 35px;
     font-size: 20px;
-    color: $color-light;
-    background-color: $color-dark;
-    border: $border;
-    border-radius: $border-radius;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    border: var(--border);
+    border-radius: var(--border-radius);
 
     @include hover {
-        color: $color-dark;
-        background-color: $color-accent;
+        color: var(--color-dark);
+        background-color: var(--color-accent);
     }
 
     &--transparent {
-        color: $color-dark;
+        color: var(--color-dark);
         background-color: transparent;
     }
 }

@@ -3,10 +3,10 @@
     @include square(48px);
 
     position: relative;
-    border-radius: $border-radius-small;
+    border-radius: var(--border-radius-small);
 
     @include hover {
-        background-color: $color-accent;
+        background-color: var(--color-accent);
     }
 
     &::before,
@@ -17,7 +17,7 @@
         left: 7px;
         width: 70%;
         height: 2px;
-        background-color: $color-dark;
+        background-color: var(--color-dark);
         border-radius: 5px;
     }
 
