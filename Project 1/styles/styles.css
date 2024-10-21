@@ -392,7 +392,7 @@ main {
 }
 
 .quote__container {
-  background: url("../images/quote-background.png") no-repeat center/cover;
+  background: url("../images/quote-bg.png") no-repeat center/cover;
 }
 .quote__item {
   width: 50%;
@@ -446,7 +446,7 @@ main {
   position: absolute;
   height: 90%;
   width: 90%;
-  background-image: url("../images/screensaver-video.png");
+  background-image: url("../images/video-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
   transform: translateX(-1rem);
@@ -481,7 +481,7 @@ main {
   align-items: center;
 }
 .promises__image {
-  background: url("../images/promises-background.png") no-repeat center/cover;
+  background: url("../images/promises-bg.png") no-repeat center/cover;
   height: 33.75rem;
   width: 41.5%;
   margin-right: -14%;
@@ -524,7 +524,7 @@ main {
     display: none;
   }
   .promises__desc {
-    background: url("../images/promises-background.png") no-repeat center/cover;
+    background: url("../images/promises-bg.png") no-repeat center/cover;
     box-sizing: border-box;
     width: auto;
     padding: 4.6875rem;
