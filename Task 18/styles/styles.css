@@ -457,7 +457,7 @@ main {
   position: absolute;
   height: 54px;
   width: 68px;
-  background-image: url(../../images/badge.svg);
+  background-image: url(../images/badge.svg);
   right: 10px;
   top: 10px;
 }
@@ -466,7 +466,7 @@ main {
   position: absolute;
   height: 30px;
   width: 101px;
-  background-image: url(../../images/tooltip.svg);
+  background-image: url(../images/tooltip.svg);
   right: -75px;
   top: 25px;
   z-index: 1;
