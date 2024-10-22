@@ -367,10 +367,12 @@ body {
   height: 100vh;
   background-color: #9789F9;
   font-family: "Bebas Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -480,4 +482,8 @@ main {
   box-sizing: content-box;
   border-radius: 30px;
   border: none;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: rgb(12, 203, 12);
 }/*# sourceMappingURL=styles.css.map */

@@ -9,4 +9,11 @@
             box-sizing: content-box;
     border-radius: 30px;
     border: none;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: rgb(12, 203, 12);
+    }
 }
