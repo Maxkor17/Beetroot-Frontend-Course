@@ -1,0 +1,127 @@
+.pricing-card {
+    --width: 370px;
+    --height: 640px;
+    --buttonPositionBottom: -27px;
+    --buttonBackgroundColor: #6FCFFB;
+    
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    background-color: rgba(245, 243, 249, 1);
+    
+    &__header {
+        padding: 40px 70px 30px 70px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        row-gap: 20px;
+    }
+
+    &__price {
+        font-size: 0;
+    }
+
+    &__currency {
+        font-family: 'Bebas Neue Thin';
+        font-size: 24px;
+        vertical-align: top;
+    }
+
+    &__amount {
+        font-family: 'Bebas Neue Thin';
+        font-size: 60px;
+    }
+
+    &__hour {
+        font-family: 'Bebas Neue';
+        font-size: 16px;
+    }
+
+    &__title {
+        font-family: 'Bebas Neue Book';
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        row-gap: 40px;
+        height: 390px;
+        padding: 40px 110px 60px 110px;
+        background-color: #FFFFFF;
+        border-top-left-radius: 25%;
+        border-top-right-radius: 25%;
+    }
+
+    &__features {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        row-gap: 30px;
+    }
+
+    &__feature {
+        font-family: 'Roboto';
+        font-size: 16px;
+    }
+
+    &__button {
+        position: absolute;
+        background-color: var(--buttonBackgroundColor);
+        bottom: var(--buttonPositionBottom);
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+
+    &--accent {
+        --width: 400px;
+        --height: 673px;
+        --buttonPositionBottom: 80px;
+        --buttonBackgroundColor: #FD8D7B;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 54px;
+            width: 68px;
+            background-image: url(../../images/badge.svg);
+            right: 10px;
+            top: 10px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 30px;
+            width: 101px;
+            background-image: url(../../images/tooltip.svg);
+            right: -75px;
+            top: 25px;
+            z-index: 1;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+body {
+    height: 100vh;
+    background-color: #9789F9;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+main {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+}
